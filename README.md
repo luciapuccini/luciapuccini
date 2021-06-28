@@ -1,6 +1,19 @@
-## Lucia Puccini
+## Lucia Puccini [Website](https://luciapuccini.netlify.app/)
 
 Personal website
 
-## Status
+## Run this proyect
+> npm install
+
+> npm start
+
+## About the proyect
+- UI components based in react-bootstrap
+- Icons provided by fontawesome
+
+## Hosting
+Hosted with netlify
 [![Netlify Status](https://api.netlify.com/api/v1/badges/cb543dd1-a18b-4d07-8962-de20568cf38b/deploy-status)](https://app.netlify.com/sites/lucia-puccini/deploys)
+
+# C&S controles y sistemas S.R.L [Website](https://cyselectronics.netlify.app/)
+React website for electronics company in San Nicolás, Argentina.

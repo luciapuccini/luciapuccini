@@ -6,6 +6,7 @@
 
 .listItem:hover {
   background-color:#ff8ba7 !important;
+  border-color:#33272a !important;
 }
 
 .listItem:active {

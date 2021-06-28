@@ -1,5 +1,5 @@
 body {
-  background-color: #fff4b9;
+  background-color: #faeee7;
   margin: 0;
   font-family: "Roboto Mono", monospace;
   -webkit-font-smoothing: antialiased;
@@ -9,4 +9,12 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+h1, h2, h3, h4 {
+color:  #33272a
+}
+
+p,a {
+  color:#594a4e
 }

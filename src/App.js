@@ -20,8 +20,7 @@ const App = () => (
         <p>
           I'm a front-end developer mainly working with React.JS and React
           Native. I consider myself an experienced engineer, who can adapt
-          quickly to new challenges using up-and-comming technologies. I've been
-          working with nimble.la for the past 3 years.
+          quickly to new challenges using up-and-comming technologies. 
         </p>
         <p>
           <b>Feel free to contact me at:</b>

@@ -11,3 +11,4 @@ Check out my projects!
 
 ## Hosting
 
+github pages

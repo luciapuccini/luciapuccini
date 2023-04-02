@@ -1,4 +1,4 @@
-## Lucia Puccini [Website](https://luciapuccini.github.io/luciapuccini)
+## Lucia Puccini [Website](http://www.luciapuccini.com/)
 
 Personal website
 

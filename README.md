@@ -1,14 +1,11 @@
-## Lucia Puccini [Website](https://luciapuccini.github.io/luciapuccini)
+## Lucia Puccini [Website](TDB)
 
 Personal website
 
-## Run this proyect
-> npm install
-> npm start
 
 ## About the proyect
-Check out my projects!
+Simple Landing page for showcasing projects
 
 ## Hosting
 
-github pages
+Netlify

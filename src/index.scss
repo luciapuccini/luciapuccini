@@ -1,6 +1,6 @@
 // src/index.scss
 
-@import './styles/_theme';
+@use './styles/theme' as *;
 
 *, *::before, *::after {
   box-sizing: border-box;

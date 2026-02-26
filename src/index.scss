@@ -1,0 +1,11 @@
+// src/index.scss
+
+@use './styles/theme' as *;
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}

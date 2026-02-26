@@ -1,42 +1,463 @@
-#root {
-  max-width: 1280px;
+@import 'styles/_theme';
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  width: min(960px, calc(100% - 2 * #{$spacing-md}));
   margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.app__header {
+  padding: $spacing-sm 0;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+.header__inner {
+  @extend .container;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-transform: uppercase;
+  font-size: $font-size-sm;
+  letter-spacing: 0.12em;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: $spacing-xs;
+  font-weight: 600;
+}
+
+.brand__symbol {
+  color: $color-primary;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: $spacing-md;
+}
+
+.nav__link {
+  color: $color-muted;
+  font-weight: 500;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.nav__link:hover,
+.nav__link:focus {
+  color: $color-secondary;
+  transform: translateY(-1px);
+}
+
+.main {
+  flex: 1;
+}
+
+.hero {
+  @extend .container;
+  padding: $spacing-xl 0 $spacing-lg;
+}
+
+.hero__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: $spacing-xs;
+  font-size: $font-size-sm;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: $color-muted;
+}
+
+.hero__eyebrow::before {
+  content: '';
+  width: 38px;
+  height: 3px;
+  background: $color-primary;
+  border-radius: 999px;
+}
+
+.hero__title {
+  margin: $spacing-sm 0;
+  font-size: $font-size-xl;
+  line-height: $line-height-tight;
+  font-weight: 600;
+}
+
+.hero__lead {
+  max-width: 620px;
+  color: $color-muted;
+  font-size: $font-size-lg;
+}
+
+.hero__sub {
+  margin-top: $spacing-sm;
+  max-width: 640px;
+  color: $color-secondary;
+}
+
+.hero__actions {
+  margin-top: $spacing-md;
+  display: flex;
+  align-items: center;
+  gap: $spacing-sm;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: $spacing-xs;
+  padding: $spacing-xs $spacing-md;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  background: $color-primary;
+  color: #06122f;
+  font-size: $font-size-sm;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.button:hover,
+.button:focus {
+  transform: translateY(-1px);
+  box-shadow: 0 12px 30px rgba(160, 184, 217, 0.25);
+}
+
+.button--ghost {
+  background: transparent;
+  color: $color-secondary;
+  border-color: rgba(160, 184, 217, 0.4);
+}
+
+.button--ghost:hover,
+.button--ghost:focus {
+  background: rgba(160, 184, 217, 0.12);
+}
+
+.button--link {
+  background: transparent;
+  border-color: transparent;
+  color: $color-primary;
+  box-shadow: none;
+}
+
+.button--link:hover,
+.button--link:focus {
+  background: transparent;
+  color: lighten($color-primary, 8%);
+}
+
+.skills {
+  @extend .container;
+  margin-top: $spacing-lg;
+  padding: $spacing-md 0;
+}
+
+.skills__title {
+  margin: 0 0 $spacing-sm;
+  font-size: $font-size-lg;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.skills__description {
+  margin: 0 0 $spacing-sm;
+  color: $color-muted;
+}
+
+.skills__grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $spacing-xs;
+}
+
+.skill-pill {
+  padding: $spacing-xs $spacing-sm;
+  background: rgba(160, 184, 217, 0.08);
+  border: 1px solid rgba(160, 184, 217, 0.25);
+  color: $color-secondary;
+  border-radius: 999px;
+  font-size: $font-size-sm;
+  letter-spacing: 0.03em;
+}
+
+.experience {
+  @extend .container;
+  margin-top: $spacing-xl;
+  display: grid;
+  gap: $spacing-lg;
+}
+
+.experience__section {
+  padding: $spacing-md 0;
+  border-bottom: 1px solid rgba(160, 184, 217, 0.12);
+}
+
+.experience__section:last-child {
+  border-bottom: none;
+}
+
+.section__title {
+  margin: 0 0 $spacing-xs;
+  font-size: $font-size-lg;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.section__lead {
+  margin: 0 0 $spacing-sm;
+  color: $color-muted;
+  font-size: $font-size-sm;
+  text-transform: none;
+  letter-spacing: normal;
+}
+
+.story-list {
+  margin: $spacing-sm 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: $spacing-xs;
+}
+
+.story-list li {
+  position: relative;
+  padding-left: $spacing-md;
+  color: $color-secondary;
+}
+
+.story-list li::before {
+  content: '\2022';
+  position: absolute;
+  left: 0;
+  color: $color-primary;
+}
+
+.milestones {
+  margin: $spacing-sm 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: $spacing-sm;
+}
+
+.milestone {
+  position: relative;
+  padding-left: $spacing-lg;
+}
+
+.milestone::before {
+  content: '';
+  position: absolute;
+  top: 0.4rem;
+  left: $spacing-sm;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: $color-primary;
+  box-shadow: 0 0 0 6px rgba(160, 184, 217, 0.18);
+}
+
+.milestone::after {
+  content: '';
+  position: absolute;
+  top: 1.2rem;
+  left: $spacing-sm + 0.25rem;
+  width: 2px;
+  height: calc(100% - 1.2rem);
+  background: rgba(160, 184, 217, 0.24);
+}
+
+.milestone:last-child::after {
+  display: none;
+}
+
+.milestone__title {
+  margin: 0;
+  font-weight: 600;
+  font-size: $font-size-base;
+}
+
+.milestone__details {
+  margin: $spacing-2xs 0 0;
+  color: $color-muted;
+  font-size: $font-size-sm;
+}
+
+.expertise-list {
+  margin: $spacing-sm 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: $spacing-xs;
+}
+
+.expertise-list li {
+  color: $color-secondary;
+}
+
+.projects {
+  display: grid;
+  gap: $spacing-sm;
+}
+
+.project-card {
+  padding: $spacing-sm 0;
+}
+
+.project-card__title {
+  margin: 0;
+  font-weight: 600;
+}
+
+.project-card__stack {
+  margin: $spacing-2xs 0 0;
+  color: $color-muted;
+  font-size: $font-size-sm;
+}
+
+.philosophy {
+  padding: $spacing-md 0;
+}
+
+.philosophy p {
+  margin: 0;
+  font-size: $font-size-lg;
+  line-height: $line-height-tight;
+  border-left: 3px solid $color-primary;
+  padding-left: $spacing-sm;
+}
+
+.footer {
+  margin-top: $spacing-xl;
+  padding: $spacing-sm 0 $spacing-md;
+  color: $color-muted;
+  font-size: $font-size-sm;
+}
+
+.footer__inner {
+  @extend .container;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .header__inner {
+    flex-direction: column;
+    gap: $spacing-sm;
   }
-  to {
-    transform: rotate(360deg);
+
+  .nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: $spacing-sm;
+  }
+
+  .nav__link {
+    font-size: $font-size-xs;
+  }
+
+  .hero {
+    padding: $spacing-lg 0 $spacing-md;
+    text-align: center;
+  }
+
+  .hero__eyebrow {
+    justify-content: center;
+  }
+
+  .hero__title {
+    font-size: 1.8rem;
+  }
+
+  .hero__lead,
+  .hero__sub {
+    max-width: none;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero__actions {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: $spacing-xs;
+  }
+
+  .skills {
+    padding: $spacing-sm;
+  }
+
+  .skills,
+  .experience {
+    margin-top: $spacing-md;
+  }
+
+  .experience {
+    gap: $spacing-md;
+  }
+
+  .experience__section {
+    padding: $spacing-sm;
+  }
+
+  .projects {
+    gap: $spacing-xs;
+  }
+
+  .project-card {
+    padding: $spacing-xs;
+  }
+
+  .philosophy p {
+    font-size: $font-size-base;
+  }
+
+  .footer__inner {
+    flex-direction: column;
+    gap: $spacing-xs;
+    text-align: center;
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+@media (max-width: 480px) {
+  .container,
+  .header__inner,
+  .hero,
+  .skills,
+  .experience,
+  .footer__inner {
+    width: calc(100% - 2 * #{$spacing-sm});
   }
-}
 
-.card {
-  padding: 2em;
-}
+  .hero__title {
+    font-size: 1.6rem;
+  }
 
-.read-the-docs {
-  color: #888;
+  .hero__actions {
+    flex-direction: column;
+  }
+
+  .skills__grid {
+    justify-content: center;
+  }
+
+  .milestone {
+    padding-left: $spacing-md;
+  }
+
+  .milestone::before {
+    left: $spacing-xs;
+  }
+
+  .milestone::after {
+    left: $spacing-xs + 0.25rem;
+  }
 }

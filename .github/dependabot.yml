@@ -11,7 +11,7 @@ updates:
       - dependency-type: "direct"
     ignore:
       - dependency-name: "*"
-      - update-types:
+        update-types:
           - "version-update:semver-major"
     # Limit to 5 open pull requests at once
     open-pull-requests-limit: 5

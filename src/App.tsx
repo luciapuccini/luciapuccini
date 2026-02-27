@@ -7,22 +7,13 @@ const cvMarkdown = new URL('./assets/lucia-puccini-cv.md', import.meta.url).href
 const cvPdf = new URL('./assets/lucia-puccini-cv.pdf', import.meta.url).href;
 
 const skills = [
-  'Next.js',
-  'TypeScript',
-  'React',
-  'SASS',
-  'LaunchDarkly',
-  'Core Web Vitals',
-  'SEO & Structured Data',
-  'A/B Experimentation',
-  'GTM / GA',
-  'Redis',
-  'Cloudflare',
-  'GraphQL',
-  'Python',
-  'LangChain',
-  'Kafka',
-  'Postgres'
+  "Front-End Expertice",
+  "Web Performance Optimization",
+  'Rapid Experimentation Delivery',
+  "Full-Stack Exposure",
+  'Cross-Functional Collaboration',
+  "Proactive Problem Solving",
+  "Staying Current with Emerging Tech",
 ];
 
 function App() {
@@ -53,12 +44,13 @@ function App() {
       <main className="main">
         <section className="hero" id="top">
           <span className="hero__eyebrow">Lucia Puccini</span>
-          <h1 className="hero__title">Senior Front-end &amp; Product Engineer</h1>
+          <h1 className="hero__title">Senior Software Engineer</h1>
           <p className="hero__lead">
-            Eight years of shipping growth-focused web products—from MVP validation sprints with founders to performance-driven initiatives across Gartner&apos;s marketplaces.
+             Eight years of building and scaling web products, from lean MVPs to high-impact initiatives.
+  
           </p>
           <p className="hero__sub">
-            I bridge product, SEO, and marketing teams to design small, measurable releases that prove value fast.
+  I help teams move fast by focusing on solutions that are simple, measurable, and aligned with business goals.
           </p>
           <div className="hero__actions">
             <a
@@ -90,7 +82,7 @@ function App() {
         <section className="skills" id="skills">
           <h2 className="skills__title">Focus Areas</h2>
           <p className="skills__description">
-            Tooling and practices I reach for when accelerating discovery, shipping experiments, and scaling validated ideas.
+What I'm good at and what I enjoy working on — from building fast, scalable frontends to experimenting with new tech and collaborating across teams to have real impact.
           </p>
           <div className="skills__grid">
             {skills.map((skill) => (
@@ -106,8 +98,8 @@ function App() {
 
       <footer className="footer">
         <div className="footer__inner">
-          <span>&copy; {new Date().getFullYear()} Lucia Puccini. Crafted with curiosity.</span>
-          <span>Based in Barcelona, collaborating globally.</span>
+          <span>&copy; {new Date().getFullYear()} Lucia Puccini.</span>
+          
         </div>
       </footer>
     </div>

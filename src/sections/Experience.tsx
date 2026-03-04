@@ -64,9 +64,9 @@ const Experience = () => (
       <h2 className="section__title">Recent Experience</h2>
       <div className="projects">
         <article className="project-card">
-          <h3 className="project-card__title">GetApp</h3>
+          <h3 className="project-card__title">Gartner</h3>
           <p>
-            Software discovery platform that helps businesses find, compare, and read user reviews about B2B software solutions. Some of my latest contributions:
+            Getapp is Software discovery platform that helps businesses find, compare, and read user reviews about B2B software solutions. Some of my latest contributions:
             <ul>
 
               <li>

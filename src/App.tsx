@@ -5,6 +5,7 @@ import Experience from './sections/Experience';
 
 const cvMarkdown = new URL('./assets/lucia-puccini-cv.md', import.meta.url).href;
 const cvPdf = new URL('./assets/lucia-puccini-cv.pdf', import.meta.url).href;
+const profilePic = new URL('./assets/profile-pic.jpg', import.meta.url).href;
 
 const skills = [
   "Front-End Expertice",
@@ -43,39 +44,43 @@ function App() {
 
       <main className="main">
         <section className="hero" id="top">
-          <span className="hero__eyebrow">Lucia Puccini</span>
-          <h1 className="hero__title">Senior Software Engineer</h1>
-          <p className="hero__lead">
-             Eight years of building and scaling web products, from lean MVPs to high-impact initiatives.
-  
-          </p>
-          <p className="hero__sub">
-  I help teams move fast by focusing on solutions that are simple, measurable, and aligned with business goals.
-          </p>
-          <div className="hero__actions">
-            <a
-              className="button"
-              href={cvMarkdown}
-              download
-            >
-              Download CV (.md)
-            </a>
-            <a
-              className="button button--ghost"
-              href={cvPdf}
-              target="_blank"
-              rel="noreferrer"
-            >
-              View CV (PDF)
-            </a>
-            <a
-              className="button button--link"
-              href="https://www.linkedin.com/in/luciapuccini/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Connect on LinkedIn
-            </a>
+          <div className="hero__content">
+            <span className="hero__eyebrow">Lucia Puccini</span>
+            <h1 className="hero__title">Senior Software Engineer</h1>
+            <p className="hero__lead">
+               Eight years of building and scaling web products, from lean MVPs to high-impact initiatives.
+            </p>
+            <p className="hero__sub">
+              I help teams move fast by focusing on solutions that are simple, measurable, and aligned with business goals.
+            </p>
+            <div className="hero__actions">
+              <a
+                className="button"
+                href={cvMarkdown}
+                download
+              >
+                Download CV (.md)
+              </a>
+              <a
+                className="button button--ghost"
+                href={cvPdf}
+                target="_blank"
+                rel="noreferrer"
+              >
+                View CV (PDF)
+              </a>
+              <a
+                className="button button--link"
+                href="https://www.linkedin.com/in/luciapuccini/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Connect on LinkedIn
+              </a>
+            </div>
+          </div>
+          <div className="hero__portrait">
+            <img src={profilePic} alt="Lucia Puccini" className="hero__portrait-img" />
           </div>
         </section>
 

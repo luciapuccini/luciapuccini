@@ -62,6 +62,28 @@
 .hero {
   @extend .container;
   padding: $spacing-xl 0 $spacing-lg;
+  display: flex;
+  align-items: center;
+  gap: $spacing-xl;
+}
+
+.hero__content {
+  flex: 1;
+  min-width: 0;
+}
+
+.hero__portrait {
+  flex-shrink: 0;
+}
+
+.hero__portrait-img {
+  width: 260px;
+  height: 320px;
+  object-fit: cover;
+  border-radius: $radius-md;
+  border: 1px solid rgba(160, 184, 217, 0.25);
+  box-shadow: $shadow-soft;
+  display: block;
 }
 
 .hero__eyebrow {
@@ -369,6 +391,13 @@
   .hero {
     padding: $spacing-lg 0 $spacing-md;
     text-align: center;
+    flex-direction: column-reverse;
+    gap: $spacing-md;
+  }
+
+  .hero__portrait-img {
+    width: 180px;
+    height: 220px;
   }
 
   .hero__eyebrow {

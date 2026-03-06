@@ -80,7 +80,7 @@ function App() {
             </div>
           </div>
           <div className="hero__portrait">
-            <img src={profilePic} alt="Lucia Puccini" className="hero__portrait-img" />
+            <img src={profilePic} alt="Lucia Puccini" className="hero__portrait-img" fetchPriority="high" />
           </div>
         </section>
 

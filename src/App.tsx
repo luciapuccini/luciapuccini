@@ -3,8 +3,8 @@
 import './App.scss';
 import Experience from './sections/Experience';
 
-const cvMarkdown = new URL('./assets/lucia-puccini-cv.md', import.meta.url).href;
-const cvPdf = new URL('./assets/lucia-puccini-cv.pdf', import.meta.url).href;
+const cvPdfEN = new URL('./assets/CV Lucia puccini Resume EN.pdf', import.meta.url).href;
+const cvPdfES = new URL('./assets/Lucia Puccini CV curriculum ES.pdf', import.meta.url).href;
 const profilePic = new URL('./assets/profile-pic.jpg', import.meta.url).href;
 
 const skills = [
@@ -56,18 +56,17 @@ function App() {
             <div className="hero__actions">
               <a
                 className="button"
-                href={cvMarkdown}
+                href={cvPdfEN}
                 download
               >
-                Download CV (.md)
+                Download CV (EN)
               </a>
               <a
                 className="button button--ghost"
-                href={cvPdf}
-                target="_blank"
-                rel="noreferrer"
+                href={cvPdfES}
+                download
               >
-                View CV (PDF)
+                Download CV (ES)
               </a>
               <a
                 className="button button--link"

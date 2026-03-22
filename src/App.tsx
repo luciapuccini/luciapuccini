@@ -5,7 +5,9 @@ import Experience from './sections/Experience';
 
 const cvPdfEN = new URL('./assets/CV Lucia puccini Resume EN.pdf', import.meta.url).href;
 const cvPdfES = new URL('./assets/Lucia Puccini CV curriculum ES.pdf', import.meta.url).href;
-const profilePic = '/.netlify/images?url=/profile-pic.jpg&w=800&q=80';
+const profilePic = import.meta.env.DEV
+  ? '/profile-pic.jpg'
+  : '/.netlify/images?url=/profile-pic.jpg&w=800&q=80';
 
 const skills = [
   "Front-End Expertice",
@@ -79,7 +81,7 @@ function App() {
             </div>
           </div>
           <div className="hero__portrait">
-            <img src={profilePic} alt="Lucia Puccini" className="hero__portrait-img" fetchPriority="high" />
+            <img src={profilePic} alt="Lucia Puccini" className="hero__portrait-img" width={260} height={320} fetchPriority="high" />
           </div>
         </section>
 

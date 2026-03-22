@@ -78,7 +78,7 @@
 
 .hero__portrait-img {
   width: 260px;
-  height: 320px;
+  aspect-ratio: 13 / 16;
   object-fit: cover;
   border-radius: $radius-md;
   border: 1px solid rgba(160, 184, 217, 0.25);
@@ -397,7 +397,6 @@
 
   .hero__portrait-img {
     width: 180px;
-    height: 220px;
   }
 
   .hero__eyebrow {

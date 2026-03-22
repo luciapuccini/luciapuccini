@@ -3,25 +3,25 @@ const steps = [
 		role: "Frontend Developer",
 		company: "Nimble.la",
 		period: "2018–2019",
-		href: "#nimble",
+		href: "#nimble-1",
 	},
 	{
 		role: "Independent Contributor",
 		company: "Nimble.la",
 		period: "2019–2021",
-		href: "#nimble",
+		href: "#nimble-2",
 	},
 	{
 		role: "Software Engineer",
-		company: "Gartner / GetApp",
+		company: "Gartner",
 		period: "2021–2023",
-		href: "#gartner",
+		href: "#gartner-1",
 	},
 	{
 		role: "Senior Software Engineer",
-		company: "Gartner / GetApp",
-		period: "2023–Present",
-		href: "#gartner",
+		company: "Gartner",
+		period: "2023–2025",
+		href: "#gartner-2",
 	},
 ];
 

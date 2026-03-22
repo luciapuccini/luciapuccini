@@ -330,11 +330,11 @@
   font-weight: 500;
 }
 
-.project-card__period {
+.project-card__project {
   color: $color-muted;
 }
 
-.project-card__period::before {
+.project-card__project::before {
   content: '·';
   margin-right: $spacing-sm;
 }

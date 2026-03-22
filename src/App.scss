@@ -91,7 +91,9 @@
 }
 
 .sidebar__link {
-  display: block;
+  display: flex;
+  align-items: center;
+  gap: $spacing-xs;
   padding: $spacing-2xs $spacing-xs;
   color: $color-muted;
   font-size: $font-size-sm;
@@ -99,12 +101,28 @@
   letter-spacing: 0.04em;
   border-radius: $radius-sm;
   transition: color 0.2s ease, background 0.2s ease;
+
+  svg {
+    flex-shrink: 0;
+    opacity: 0.6;
+    transition: opacity 0.2s ease;
+  }
+}
+
+.sidebar__divider {
+  border: none;
+  border-top: 1px solid $color-border;
+  margin: $spacing-2xs 0;
 }
 
 .sidebar__link:hover,
 .sidebar__link:focus {
   color: $color-secondary;
   background: rgba(160, 184, 217, 0.08);
+
+  svg {
+    opacity: 1;
+  }
 }
 
 // Timeline
@@ -427,6 +445,10 @@
     flex-direction: row;
     flex-wrap: wrap;
     gap: $spacing-xs;
+  }
+
+  .sidebar__divider {
+    display: none;
   }
 
   .hero__title {

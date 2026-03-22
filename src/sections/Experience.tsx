@@ -14,9 +14,9 @@ const Experience = () => (
 			</p>
 			<ul>
 				<li>
-					Consumed sign-up and sign-in events via Kafka streams, curated
-					emails, merged duplicate contacts, and re-exposed the processed data
-					to downstream Kafka topics.
+					Consumed sign-up and sign-in events via Kafka streams, curated emails,
+					merged duplicate contacts, and re-exposed the processed data to
+					downstream Kafka topics.
 				</li>
 				<li>
 					Ran performance and metric validations to ensure the pipeline
@@ -28,7 +28,7 @@ const Experience = () => (
 				</li>
 				<li>
 					Expanded my full-stack capabilities — gained hands-on experience with
-					hexagonal architecture, event-driven systems, and backend patterns.
+					Event-driven architecture, Microservices, and backend patterns.
 				</li>
 			</ul>
 			<p className="project-card__stack">
@@ -52,8 +52,9 @@ const Experience = () => (
 				Working closely with product, design, and marketing, I focused on
 				identifying the smallest efforts with the biggest impact — from caching
 				blog posts to refactoring components with nested links that could cause
-				Google to penalize our site. Every feature release was carefully measured
-				through A/B testing and feature flags to avoid impacting production.
+				Google to penalize our site. Every feature release was carefully
+				measured through A/B testing and feature flags to avoid impacting
+				production.
 			</p>
 			<ul>
 				<li>
@@ -94,10 +95,9 @@ const Experience = () => (
 			</p>
 			<p>
 				Trusted as an independent contributor working directly with the client,
-				I led the front-end for a Zoom Marketplace plugin built during COVID.
-				We were among the first teams to integrate with Zoom&apos;s beta
-				extension APIs, collaborating directly with their team on the
-				integration.
+				I led the front-end for a Zoom Marketplace plugin built during COVID. We
+				were among the first teams to integrate with Zoom&apos;s beta extension
+				APIs, collaborating directly with their team on the integration.
 			</p>
 			<p>
 				The plugin captured real-time meeting audio via WebSockets, streamed it

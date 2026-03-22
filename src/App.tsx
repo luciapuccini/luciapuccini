@@ -18,13 +18,13 @@ const profilePic = import.meta.env.DEV
 	: "/.netlify/images?url=/profile-pic.jpg&w=800&q=80";
 
 const skills = [
-	"Front-End Expertise",
+	"Front-End Architecture",
+	"SEO & Organic Growth",
 	"Web Performance",
-	"Rapid Experimentation",
-	"Full-Stack Exposure",
+	"AI-Enhanced Products",
+	"A/B Testing & Experimentation",
 	"Cross-Functional Collaboration",
-	"Proactive Problem Solving",
-	"Staying Current with Emerging Tech",
+	"Event-Driven Systems",
 ];
 
 const HERO_SKILL_COUNT = 4;

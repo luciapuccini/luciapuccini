@@ -2,6 +2,7 @@ interface SidebarProps {
 	profilePic: string;
 	cvPdfEN: string;
 	cvPdfES: string;
+	children?: React.ReactNode;
 }
 
 const IconDownload = () => (
@@ -25,7 +26,7 @@ const IconMail = () => (
 	</svg>
 );
 
-const Sidebar = ({ profilePic, cvPdfEN, cvPdfES }: SidebarProps) => (
+const Sidebar = ({ profilePic, cvPdfEN, cvPdfES, children }: SidebarProps) => (
 	<aside className="sidebar">
 		<img
 			src={profilePic}
@@ -56,6 +57,7 @@ const Sidebar = ({ profilePic, cvPdfEN, cvPdfES }: SidebarProps) => (
 				<IconMail /> Email
 			</a>
 		</nav>
+		{children}
 	</aside>
 );
 

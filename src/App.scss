@@ -125,6 +125,134 @@
   }
 }
 
+// Quick Insight
+.quick-insight {
+  margin-top: $spacing-sm;
+  padding: $spacing-sm;
+  border: 1px solid rgba(160, 184, 217, 0.35);
+  border-radius: $radius-sm;
+  background: rgba(160, 184, 217, 0.04);
+}
+
+.quick-insight__title {
+  margin: 0 0 $spacing-2xs;
+  font-size: $font-size-sm;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: $color-primary;
+}
+
+.quick-insight__text {
+  margin: 0 0 $spacing-xs;
+  font-size: $font-size-xs;
+  color: $color-muted;
+  line-height: $line-height-base;
+}
+
+.quick-insight__skeleton {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-2xs;
+  margin: 0 0 $spacing-xs;
+}
+
+.quick-insight__skeleton-line {
+  height: 0.75rem;
+  border-radius: $radius-sm;
+  background: linear-gradient(90deg, rgba(160, 184, 217, 0.08) 25%, rgba(160, 184, 217, 0.15) 50%, rgba(160, 184, 217, 0.08) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+
+  &--short {
+    width: 60%;
+  }
+}
+
+@keyframes shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+.quick-insight__error {
+  margin: 0 0 $spacing-xs;
+  font-size: $font-size-xs;
+  color: #e06c75;
+}
+
+.quick-insight__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: $spacing-2xs;
+  padding: $spacing-2xs $spacing-sm;
+  font-size: $font-size-xs;
+  font-family: inherit;
+  font-weight: 500;
+  color: $color-primary;
+  background: transparent;
+  border: 1px solid rgba(160, 184, 217, 0.3);
+  border-radius: $radius-sm;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease;
+
+  &:hover:not(:disabled) {
+    background: rgba(160, 184, 217, 0.1);
+    border-color: rgba(160, 184, 217, 0.5);
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
+
+// Quick Insight – mobile nav button (hidden on desktop)
+.quick-insight-nav-btn {
+  display: none;
+  background: none;
+  border: none;
+  font: inherit;
+  cursor: pointer;
+}
+
+// Quick Insight – fullscreen modal
+.quick-insight-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(10, 15, 20, 0.92);
+  backdrop-filter: blur(8px);
+  text-transform: none;
+  letter-spacing: normal;
+}
+
+.quick-insight-modal__close {
+  position: absolute;
+  top: $spacing-sm;
+  right: $spacing-sm;
+  background: none;
+  border: none;
+  color: $color-muted;
+  cursor: pointer;
+  padding: $spacing-2xs;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: $color-primary;
+  }
+}
+
+.quick-insight-modal__content {
+  width: 90%;
+  max-width: 400px;
+  padding: $spacing-md;
+  border: 1px solid rgba(160, 184, 217, 0.35);
+  border-radius: $radius-sm;
+  background: rgba(160, 184, 217, 0.04);
+}
+
 // Timeline
 .timeline {
   padding: $spacing-md ;
@@ -449,6 +577,14 @@
 
   .sidebar__divider {
     display: none;
+  }
+
+  .quick-insight--desktop {
+    display: none;
+  }
+
+  .quick-insight-nav-btn {
+    display: inline;
   }
 
   .hero__title {

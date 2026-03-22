@@ -2,6 +2,7 @@
 
 import "./App.scss";
 import Experience from "./sections/Experience";
+import QuickInsight from "./sections/QuickInsight";
 import Sidebar from "./sections/Sidebar";
 import Timeline from "./sections/Timeline";
 
@@ -41,12 +42,15 @@ function App() {
 						<a className="nav__link" href="#skills">
 							Skills
 						</a>
+						<QuickInsight mode="mobile" />
 					</nav>
 				</div>
 			</header>
 
 			<div className="layout">
-				<Sidebar profilePic={profilePic} cvPdfEN={cvPdfEN} cvPdfES={cvPdfES} />
+				<Sidebar profilePic={profilePic} cvPdfEN={cvPdfEN} cvPdfES={cvPdfES}>
+					<QuickInsight mode="desktop" />
+				</Sidebar>
 
 				<main className="layout__content">
 					<section className="hero" id="top">

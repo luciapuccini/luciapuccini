@@ -5,7 +5,7 @@ import Experience from './sections/Experience';
 
 const cvPdfEN = new URL('./assets/CV Lucia puccini Resume EN.pdf', import.meta.url).href;
 const cvPdfES = new URL('./assets/Lucia Puccini CV curriculum ES.pdf', import.meta.url).href;
-const profilePic = new URL('./assets/profile-pic.jpg', import.meta.url).href;
+const profilePic = '/.netlify/images?url=/profile-pic.jpg&w=800&q=80';
 
 const skills = [
   "Front-End Expertice",

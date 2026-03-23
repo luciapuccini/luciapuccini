@@ -63,15 +63,15 @@ const Experience = () => (
 					summaries from user reviews to boost organic traffic
 				</li>
 				<li>
-					Single-handedly drove WCAG 2.1 compliance — set up weekly
-					accessibility reports on high-traffic pages, identified gaps, and
-					partnered with design and SEO to fix contrast ratios, alt text, fonts,
-					and semantic HTML across shared components
+					Drove WCAG 2.1 compliance efforts. Set up weekly accessibility reports
+					on high-traffic pages, identified gaps, and partnered with design and
+					SEO to fix contrast ratios, alt text, fonts, and semantic HTML across
+					shared components
 				</li>
 				<li>
-					Led the migration from Material UI to custom Sass modules, advocating
-					for clean server-rendered HTML and strict design token compliance over
-					utility-class alternatives
+					Contributed to the migration from Material UI to custom Sass modules,
+					advocating for clean server-rendered HTML and strict design token
+					compliance over utility-class alternatives
 				</li>
 				<li>
 					Reduced duplicated content and extended product pages to improve SEO

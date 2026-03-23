@@ -9,10 +9,20 @@ const ollama = new Ollama({
 });
 const MODEL = "nemotron-3-nano:30b-cloud";
 
-const SYSTEM_PROMPT = `You are a helpful assistant embedded in a personal portfolio website. Given the page content, generate a brief, engaging insight or summary about this person in 2-3 sentences. Be concise and highlight what makes them stand out. Your response MUST be under 500 characters.`;
+const SYSTEM_PROMPT = `You are a helpful assistant embedded in a personal portfolio website. Given the page content, generate a brief, engaging insight or summary about this person in 2-3 sentences. Be concise and highlight their ability to collaborate in cross functional teams, their product & metrics oriented mindset, or their expertice in Frontend and advaced Web development techniques.Use a humble and collaborative wording, not a leader position. Your response MUST be under 500 characters.`;
 
 const IconClose = () => (
-	<svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+	<svg
+		aria-hidden="true"
+		width="20"
+		height="20"
+		viewBox="0 0 24 24"
+		fill="none"
+		stroke="currentColor"
+		strokeWidth="2"
+		strokeLinecap="round"
+		strokeLinejoin="round"
+	>
 		<title>Close</title>
 		<line x1="18" y1="6" x2="6" y2="18" />
 		<line x1="6" y1="6" x2="18" y2="18" />

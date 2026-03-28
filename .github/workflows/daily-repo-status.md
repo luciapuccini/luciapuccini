@@ -34,7 +34,7 @@ safe-outputs:
 source: githubnext/agentics/workflows/daily-repo-status.md@1f672aef974f4246124860fc532f82fe8a93a57e
 engine:
   id: copilot
-  model: gpt-4o
+  model: gpt-4.1-mini
 ---
 
 # Daily Repo Status

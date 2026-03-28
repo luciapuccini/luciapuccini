@@ -32,7 +32,9 @@ safe-outputs:
     labels: [report, daily-status]
     close-older-issues: true
 source: githubnext/agentics/workflows/daily-repo-status.md@1f672aef974f4246124860fc532f82fe8a93a57e
-engine: claude
+engine:
+  id: claude
+  model: claude-haiku-4-5
 ---
 
 # Daily Repo Status

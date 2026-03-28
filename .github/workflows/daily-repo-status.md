@@ -33,8 +33,8 @@ safe-outputs:
     close-older-issues: true
 source: githubnext/agentics/workflows/daily-repo-status.md@1f672aef974f4246124860fc532f82fe8a93a57e
 engine:
-  id: claude
-  model: claude-haiku-4-5
+  id: copilot
+  model: gpt-4o
 ---
 
 # Daily Repo Status

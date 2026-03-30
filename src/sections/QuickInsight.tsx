@@ -1,12 +1,7 @@
 import { Ollama } from "ollama/browser";
 import { useState } from "react";
 
-const ollama = new Ollama({
-	host: "https://ollama.com",
-	headers: {
-		Authorization: `Bearer ${import.meta.env.VITE_OLLAMA_API_KEY}`,
-	},
-});
+const ollama = new Ollama({ host: window.location.origin });
 const MODEL = "nemotron-3-nano:30b-cloud";
 
 const SYSTEM_PROMPT = `You are a helpful assistant embedded in a personal portfolio website. Given the page content, generate a brief, engaging insight or summary about this person in 2-3 sentences. Be concise and highlight their ability to collaborate in cross functional teams, their product & metrics oriented mindset, or their expertice in Frontend and advaced Web development techniques.Use a humble and collaborative wording, not a leader position. Your response MUST be under 500 characters.`;

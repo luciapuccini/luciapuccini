@@ -41,6 +41,7 @@ const QuickInsight = ({ mode }: { mode: "desktop" | "mobile" }) => {
 		try {
 			const response = await ollama.chat({
 				model: MODEL,
+				stream: false,
 				messages: [
 					{ role: "system", content: SYSTEM_PROMPT },
 					{

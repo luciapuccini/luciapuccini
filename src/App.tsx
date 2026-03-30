@@ -14,9 +14,7 @@ const cvPdfES = new URL(
 	"./assets/Lucia Puccini CV curriculum ES.pdf",
 	import.meta.url,
 ).href;
-const profilePic = import.meta.env.DEV
-	? "/profile-pic.webp"
-	: "/cdn-cgi/image/width=800,quality=80/profile-pic.webp";
+const profilePic = "/profile-pic.webp";
 
 const skills = [
 	"Front-End Architecture",

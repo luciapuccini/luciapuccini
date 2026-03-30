@@ -2,7 +2,7 @@ import { Ollama } from "ollama/browser";
 import { useState } from "react";
 
 const ollama = new Ollama({
-	host: "https://api.ollama.com",
+	host: "https://ollama.com",
 	headers: {
 		Authorization: `Bearer ${import.meta.env.VITE_OLLAMA_API_KEY}`,
 	},

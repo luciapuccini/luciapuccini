@@ -11,15 +11,6 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src'),
     },
   },
-  server: {
-    proxy: {
-      '/ollama': {
-        target: 'https://ollama.com',
-        changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/ollama/, ''),
-      },
-    },
-  },
   css: {
     preprocessorOptions: {
       scss: {},

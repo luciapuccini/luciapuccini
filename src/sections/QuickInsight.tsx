@@ -2,10 +2,7 @@ import { Ollama } from "ollama/browser";
 import { useState } from "react";
 
 const ollama = new Ollama({
-	host: "https://ollama.com",
-	headers: {
-		Authorization: `Bearer ${import.meta.env.VITE_OLLAMA_API_KEY}`,
-	},
+	host: window.location.origin,
 });
 const MODEL = "nemotron-3-nano:30b-cloud";
 

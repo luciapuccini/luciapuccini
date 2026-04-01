@@ -14,7 +14,7 @@ const cvPdfES = new URL(
 ).href;
 const profilePic = import.meta.env.DEV
 	? "/profile-pic.webp"
-	: "/.netlify/images?url=/profile-pic.webp&w=800&q=80";
+	: "https://luciapuccini.com/.netlify/images?url=/profile-pic.webp&w=260&q=80";
 
 const skills = [
 	"Front-End Architecture",

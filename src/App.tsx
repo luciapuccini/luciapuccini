@@ -6,10 +6,8 @@ import QuickInsight from "./sections/QuickInsight";
 import Sidebar from "./sections/Sidebar";
 import Timeline from "./sections/Timeline";
 
-const cvPdfEN = new URL(
-	"./assets/CV Lucia puccini Resume EN.pdf",
-	import.meta.url,
-).href;
+const cvPdfEN = new URL("./assets/Lucia Puccini Resume EN.pdf", import.meta.url)
+	.href;
 const cvPdfES = new URL(
 	"./assets/Lucia Puccini CV curriculum ES.pdf",
 	import.meta.url,

@@ -6,12 +6,10 @@ import QuickInsight from "./sections/QuickInsight";
 import Sidebar from "./sections/Sidebar";
 import Timeline from "./sections/Timeline";
 
-const cvPdfEN = new URL("./assets/Lucia Puccini Resume EN.pdf", import.meta.url)
+const cvPdfEN = new URL("./assets/Lucia_Puccini_Resume.pdf", import.meta.url)
 	.href;
-const cvPdfES = new URL(
-	"./assets/Lucia Puccini CV curriculum ES.pdf",
-	import.meta.url,
-).href;
+const cvPdfES = new URL("./assets/Lucia_Puccini_Resume_ES.pdf", import.meta.url)
+	.href;
 const profilePic = import.meta.env.DEV
 	? "/profile-pic.webp"
 	: "https://luciapuccini.com/.netlify/images?url=/profile-pic.webp&w=260&q=80";

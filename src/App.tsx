@@ -1,10 +1,12 @@
 // src/App.tsx
 
+import { Routes, Route, Link } from "react-router-dom";
 import "./App.scss";
 import Experience from "./sections/Experience";
 import QuickInsight from "./sections/QuickInsight";
 import Sidebar from "./sections/Sidebar";
 import Timeline from "./sections/Timeline";
+import ProjectsPage from "./pages/ProjectsPage";
 
 const cvPdfEN = new URL("./assets/Lucia_Puccini_Resume.pdf", import.meta.url)
 	.href;
@@ -26,7 +28,7 @@ const skills = [
 
 const HERO_SKILL_COUNT = 4;
 
-function App() {
+function HomePage() {
 	return (
 		<div className="app">
 			<header className="app__header">
@@ -38,6 +40,9 @@ function App() {
 						<a className="nav__link" href="#skills">
 							Skills
 						</a>
+						<Link className="nav__link" to="/projects">
+							Projects
+						</Link>
 						<QuickInsight mode="mobile" />
 					</nav>
 				</div>
@@ -113,6 +118,15 @@ function App() {
 				</div>
 			</footer>
 		</div>
+	);
+}
+
+function App() {
+	return (
+		<Routes>
+			<Route path="/" element={<HomePage />} />
+			<Route path="/projects" element={<ProjectsPage />} />
+		</Routes>
 	);
 }
 

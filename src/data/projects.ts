@@ -8,27 +8,33 @@ export interface Project {
 
 export const projects: Project[] = [
 	{
-		name: "Project Alpha",
-		url: "https://example.com",
+		name: "Magnaposi",
+		url: "https://magnaposi.com",
 		description:
-			"A brief description of what this project does and the problem it solves. One or two sentences is ideal.",
-		stack: ["React", "TypeScript", "Node.js"],
-		screenshot: null,
+			"SPA Marketing site for the MAGNAPOSI SM-500T. i18n (EN / ES) with a separate Vite entry point per locale. Contact form with spam protection via Netlify Forms",
+		stack: ["React 19", "TypeScript", "Vite", "Tailwind CSS v4", "Netlify"],
+		screenshot: "public/images/magnaposi.png",
 	},
 	{
-		name: "Project Beta",
-		url: "https://example.com",
+		name: "Farmacia Duret",
+		url: "https://farmacia-duret.puccinilucia.workers.dev",
 		description:
-			"A brief description of what this project does and the problem it solves. One or two sentences is ideal.",
-		stack: ["Next.js", "SASS", "PostgreSQL"],
-		screenshot: null,
+			"Website for a pharmacy in Villa Rosa, Buenos Aires — product catalog, online order form, and Telegram notifications for order submissions. Runs fully server-side on Cloudflare's edge network.",
+		stack: [
+			"Next.js 16",
+			"TypeScript",
+			"SCSS Modules",
+			"Cloudflare Workers",
+			"Telegram Bot API",
+		],
+		screenshot: "public/images/farmacia_duret.png",
 	},
 	{
-		name: "Project Gamma",
-		url: "https://example.com",
+		name: "StrengthSync",
+		url: "https://github.com/luciapuccini/coach_web",
 		description:
-			"A brief description of what this project does and the problem it solves. One or two sentences is ideal.",
-		stack: ["Vue", "GraphQL", "AWS"],
-		screenshot: null,
+			"Pre-launch landing for an AI-powered strength training platform that pairs a real personal trainer with an Apple Health–synced dashboard. Under development.",
+		stack: ["Next.js 16", "TypeScript", "Tailwind v4", "shadcn/radix UI"],
+		screenshot: "public/images/strengthsync.png",
 	},
 ];

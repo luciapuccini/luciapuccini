@@ -6,54 +6,6 @@
 	flex-direction: column;
 }
 
-// ─── Header ──────────────────────────────────────────────────────────────────
-
-.projects-page__header {
-	padding: $spacing-sm 0;
-	border-bottom: 1px solid $color-border;
-}
-
-.projects-page__header-inner {
-	width: min(960px, calc(100% - 2 * #{$spacing-md}));
-	margin: 0 auto;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-}
-
-.projects-page__back {
-	display: inline-flex;
-	align-items: center;
-	gap: $spacing-xs;
-	color: $color-muted;
-	font-size: $font-size-sm;
-	font-weight: 500;
-	letter-spacing: 0.04em;
-	text-transform: uppercase;
-	transition: color 0.2s ease;
-
-	svg {
-		transition: transform 0.2s ease;
-	}
-
-	&:hover {
-		color: $color-secondary;
-
-		svg {
-			transform: translateX(-2px);
-		}
-	}
-}
-
-.projects-page__nav {
-	display: flex;
-	align-items: center;
-	gap: $spacing-md;
-	text-transform: uppercase;
-	font-size: $font-size-sm;
-	letter-spacing: 0.12em;
-}
-
 // ─── Main ─────────────────────────────────────────────────────────────────────
 
 .projects-page__main {
@@ -309,10 +261,6 @@
 }
 
 @media (max-width: 480px) {
-	.projects-page__nav {
-		display: none;
-	}
-
 	.project-entry__description {
 		max-width: none;
 	}

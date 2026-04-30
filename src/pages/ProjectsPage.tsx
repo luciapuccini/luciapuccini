@@ -1,37 +1,24 @@
 import { Link } from "react-router-dom";
 import { projects } from "../data/projects";
+import QuickInsight from "../sections/QuickInsight";
 import "./ProjectsPage.scss";
 
 const ProjectsPage = () => {
 	return (
 		<div className="projects-page">
-			<header className="projects-page__header">
-				<div className="projects-page__header-inner">
-					<Link to="/" className="projects-page__back">
-						<svg
-							width="16"
-							height="16"
-							viewBox="0 0 16 16"
-							fill="none"
-							aria-hidden="true"
-						>
-							<path
-								d="M10 3L5 8L10 13"
-								stroke="currentColor"
-								strokeWidth="1.5"
-								strokeLinecap="round"
-								strokeLinejoin="round"
-							/>
-						</svg>
-						Lucia Puccini
-					</Link>
-					<nav className="projects-page__nav">
+			<header className="app__header">
+				<div className="header__inner">
+					<nav className="nav">
 						<a className="nav__link" href="/#experience">
 							Experience
 						</a>
 						<a className="nav__link" href="/#skills">
 							Skills
 						</a>
+						<Link className="nav__link" to="/projects">
+							Projects
+						</Link>
+						<QuickInsight mode="mobile" />
 					</nav>
 				</div>
 			</header>
@@ -41,8 +28,7 @@ const ProjectsPage = () => {
 					<div className="projects-page__intro">
 						<h1 className="projects-page__title">Projects</h1>
 						<p className="projects-page__lead">
-							A selection of things I&apos;ve built — from internal tools to public
-							products.
+							A selection of things I&apos;ve built
 						</p>
 					</div>
 
@@ -116,7 +102,10 @@ const ProjectsPage = () => {
 											{project.description}
 										</p>
 
-										<ul className="project-entry__stack" aria-label="Tech stack">
+										<ul
+											className="project-entry__stack"
+											aria-label="Tech stack"
+										>
 											{project.stack.map((tech) => (
 												<li key={tech} className="project-entry__tech">
 													{tech}

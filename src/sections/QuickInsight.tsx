@@ -7,9 +7,9 @@ const ollama = new Ollama({
 		Authorization: `Bearer ${import.meta.env.VITE_OLLAMA_API_KEY}`,
 	},
 });
-const MODEL = "nemotron-3-nano:30b-cloud";
+const MODEL = "qwen3.5:cloud";
 
-const SYSTEM_PROMPT = `You are a helpful assistant embedded in a personal portfolio website. Given the page content, generate a brief, engaging insight or summary about this person in 2-3 sentences. Be concise and highlight their ability to collaborate in cross functional teams, their product & metrics oriented mindset, or their expertice in Frontend and advaced Web development techniques.Use a humble and collaborative wording, not a leader position. Your response MUST be under 500 characters.`;
+const SYSTEM_PROMPT = `You write short portfolio bio summaries. Output only the summary — no preamble, no commentary, no meta-text.`;
 
 const IconClose = () => (
 	<svg
@@ -50,10 +50,15 @@ const QuickInsight = ({ mode }: { mode: "desktop" | "mobile" }) => {
 					{ role: "system", content: SYSTEM_PROMPT },
 					{
 						role: "user",
-						content: `Here is the page content:\n\n${pageText}`,
+						content: `Write a 2-3 sentence insight about Lucia Puccini based on the following portfolio content. Highlight cross-functional collaboration, product & metrics mindset, and frontend expertise. Use humble, collegial tone (no "leader" framing). Output the insight only — no intro, no explanation.\n\n${pageText}`,
 					},
+					{ role: "assistant", content: "Lucia" },
 				],
-				options: { num_predict: 150 },
+				options: {
+					num_predict: 200,
+					temperature: 0.7,
+					stop: ["Here is", "Note:", "I will", "I'll", "\n\n"],
+				},
 			});
 
 			const msg = response.message as unknown as {

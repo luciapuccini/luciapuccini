@@ -42,14 +42,16 @@ const ProjectsPage = () => {
 										rel="noopener noreferrer"
 										className="project-entry__screenshot-link"
 										tabIndex={-1}
-										aria-hidden="true"
 									>
 										<div className="project-entry__screenshot">
 											{project.screenshot ? (
 												<img
 													src={project.screenshot}
+													srcSet={`${project.screenshot.replace(/\.webp$/, "")}-400w.webp 400w, ${project.screenshot.replace(/\.webp$/, "")}-800w.webp 800w, ${project.screenshot} 1531w`}
+													sizes="(max-width: 768px) calc(100vw - 1.5rem), 460px"
 													alt={`${project.name} screenshot`}
 													className="project-entry__img"
+													fetchPriority={idx < 2 ? "high" : "auto"}
 												/>
 											) : (
 												<div
@@ -77,6 +79,7 @@ const ProjectsPage = () => {
 												target="_blank"
 												rel="noopener noreferrer"
 												className="project-entry__name-link"
+												aria-label={`${project.name} (opens in new tab)`}
 											>
 												{project.name}
 												<svg

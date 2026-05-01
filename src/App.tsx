@@ -1,20 +1,20 @@
 // src/App.tsx
 
-import { Routes, Route, Link } from "react-router-dom";
+import { Link, Route, Routes } from "react-router-dom";
 import "./App.scss";
+import ProjectsPage from "./pages/ProjectsPage";
 import Experience from "./sections/Experience";
 import QuickInsight from "./sections/QuickInsight";
 import Sidebar from "./sections/Sidebar";
 import Timeline from "./sections/Timeline";
-import ProjectsPage from "./pages/ProjectsPage";
 
 const cvPdfEN = new URL("./assets/Lucia_Puccini_Resume.pdf", import.meta.url)
 	.href;
 const cvPdfES = new URL("./assets/Lucia_Puccini_Resume_ES.pdf", import.meta.url)
 	.href;
 const profilePic = import.meta.env.DEV
-	? "/profile-pic.webp"
-	: "https://luciapuccini.com/.netlify/images?url=/profile-pic.webp&w=260&q=80";
+	? "images/profile-pic.webp"
+	: "https://luciapuccini.com/.netlify/images?url=/images/profile-pic.webp&w=260&q=80";
 
 const skills = [
 	"Front-End Architecture",

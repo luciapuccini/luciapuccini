@@ -13,7 +13,7 @@ export const projects: Project[] = [
 		description:
 			"SPA Marketing site for the MAGNAPOSI SM-500T. i18n (EN / ES) with a separate Vite entry point per locale. Contact form with spam protection via Netlify Forms",
 		stack: ["React 19", "TypeScript", "Vite", "Tailwind CSS v4", "Netlify"],
-		screenshot: "public/images/magnaposi.png",
+		screenshot: "/images/magnaposi.webp",
 	},
 	{
 		name: "Farmacia Duret",
@@ -27,14 +27,14 @@ export const projects: Project[] = [
 			"Cloudflare Workers",
 			"Telegram Bot API",
 		],
-		screenshot: "public/images/farmacia_duret.png",
+		screenshot: "/images/farmacia_duret.webp",
 	},
 	{
 		name: "StrengthSync",
-		url: "https://github.com/luciapuccini/coach_web",
+		url: "https://strengthsync.ai",
 		description:
 			"Pre-launch landing for an AI-powered strength training platform that pairs a real personal trainer with an Apple Health–synced dashboard. Under development.",
 		stack: ["Next.js 16", "TypeScript", "Tailwind v4", "shadcn/radix UI"],
-		screenshot: "public/images/strengthsync.png",
+		screenshot: "/images/strengthsync.webp",
 	},
 ];

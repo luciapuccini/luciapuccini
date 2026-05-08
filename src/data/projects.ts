@@ -8,12 +8,12 @@ export interface Project {
 
 export const projects: Project[] = [
 	{
-		name: "Magnaposi",
-		url: "https://magnaposi.com",
+		name: "CYS Electronics",
+		url: "https://cyselectronics.netlify.app/",
 		description:
-			"SPA Marketing site for the MAGNAPOSI SM-500T. i18n (EN / ES) with a separate Vite entry point per locale. Contact form with spam protection via Netlify Forms",
-		stack: ["React 19", "TypeScript", "Vite", "Tailwind CSS v4", "Netlify"],
-		screenshot: "/images/magnaposi.webp",
+			"Corporate Marketing site for electronics company. Contact form with spam protection via Netlify Forms",
+		stack: ["React", "TypeScript", "Vite", "Styled-components", "Netlify"],
+		screenshot: "/images/cyselectronics.webp",
 	},
 	{
 		name: "Farmacia Duret",

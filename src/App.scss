@@ -115,6 +115,15 @@
   margin: $spacing-2xs 0;
 }
 
+.sidebar__link--phone {
+  width: 100%;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  text-align: left;
+}
+
 .sidebar__link:hover,
 .sidebar__link:focus {
   color: $color-secondary;

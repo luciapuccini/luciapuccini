@@ -1,5 +1,3 @@
-// src/App.tsx
-
 import { Link, Route, Routes } from "react-router-dom";
 import "./App.scss";
 import ProjectsPage from "./pages/ProjectsPage";

@@ -17,7 +17,7 @@ export const projects: Project[] = [
 	},
 	{
 		name: "Farmacia Duret",
-		url: "https://farmacia-duret.puccinilucia.workers.dev",
+		url: "https://farmaciaduret.online",
 		description:
 			"Website for a pharmacy in Villa Rosa, Buenos Aires — product catalog, online order form, and Telegram notifications for order submissions. Runs fully server-side on Cloudflare's edge network.",
 		stack: [

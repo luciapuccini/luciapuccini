@@ -1,9 +1,12 @@
 import { useState } from "react";
 
+const cvPdfEN = new URL("../assets/Lucia_Puccini_Resume_EN.pdf", import.meta.url)
+	.href;
+const cvPdfES = new URL("../assets/Lucia_Puccini_Resume_ES.pdf", import.meta.url)
+	.href;
+
 interface SidebarProps {
 	profilePic: string;
-	cvPdfEN: string;
-	cvPdfES: string;
 	children?: React.ReactNode;
 }
 
@@ -105,7 +108,7 @@ const CopyPhone = ({ phone }: { phone: string }) => {
 	);
 };
 
-const Sidebar = ({ profilePic, cvPdfEN, cvPdfES, children }: SidebarProps) => (
+const Sidebar = ({ profilePic,  children }: SidebarProps) => (
 	<aside className="sidebar">
 		<img
 			src={profilePic}

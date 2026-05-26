@@ -1,5 +1,40 @@
 const Experience = () => (
 	<section className="experience" id="experience">
+		<article className="project-card" id="farmacia-duret">
+			<h3 className="project-card__title">Senior Frontend Engineer | Consultant</h3>
+			<p className="project-card__meta">
+				<span className="project-card__role">Farmacia Duret</span>
+				<span className="project-card__project">Web Platform</span>
+			</p>
+			<p>
+				Building Farmacia Duret&apos;s web platform — catalog content and online
+				ordering flow for an independent pharmacy in Buenos Aires, routing
+				customer orders directly to WhatsApp.
+			</p>
+			<ul>
+				<li>
+					Built with Next.js and TypeScript, deployed to Cloudflare Workers for
+					fully server-side rendering at the edge.
+				</li>
+				<li>
+					Integrated Meta&apos;s WhatsApp Cloud API for templated order
+					notifications, backed by Contentful for catalog management.
+				</li>
+				<li>
+					Set up a Vitest + Playwright test suite covering critical ordering
+					flows.
+				</li>
+				<li>
+					Delivered a separate staff back-office for order management, gated
+					behind Cloudflare Access.
+				</li>
+			</ul>
+			<p className="project-card__stack">
+				Stack: Next.js, TypeScript, Cloudflare Workers, Contentful, WhatsApp
+				Cloud API, Vitest, Playwright.
+			</p>
+		</article>
+
 		<article className="project-card" id="gartner-2">
 			<h3 className="project-card__title">Senior Software Engineer</h3>
 			<p className="project-card__meta">

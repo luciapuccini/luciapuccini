@@ -23,6 +23,12 @@ const steps = [
 		period: "2023–2025",
 		href: "#gartner-2",
 	},
+	{
+		role: "Senior Frontend Engineer",
+		company: "Farmacia Duret",
+		period: "2026–Present",
+		href: "#farmacia-duret",
+	},
 ];
 
 const Timeline = () => (

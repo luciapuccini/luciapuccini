@@ -6,10 +6,7 @@ import QuickInsight from "./sections/QuickInsight";
 import Sidebar from "./sections/Sidebar";
 import Timeline from "./sections/Timeline";
 
-const cvPdfEN = new URL("./assets/Lucia_Puccini_Resume.pdf", import.meta.url)
-	.href;
-const cvPdfES = new URL("./assets/Lucia_Puccini_Resume_ES.pdf", import.meta.url)
-	.href;
+
 const profilePic = import.meta.env.DEV
 	? "images/profile-pic.webp"
 	: "https://luciapuccini.com/.netlify/images?url=/images/profile-pic.webp&w=260&q=80";
@@ -47,7 +44,7 @@ function HomePage() {
 			</header>
 
 			<div className="layout">
-				<Sidebar profilePic={profilePic} cvPdfEN={cvPdfEN} cvPdfES={cvPdfES}>
+				<Sidebar profilePic={profilePic}>
 					<QuickInsight mode="desktop" />
 				</Sidebar>
 

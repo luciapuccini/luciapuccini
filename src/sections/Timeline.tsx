@@ -1,30 +1,18 @@
 const steps = [
 	{
-		role: "Frontend Developer",
+		role: "Frontend Engineer",
 		company: "Nimble.la",
-		period: "2018–2019",
+		period: "2018–2021",
 		href: "#nimble-1",
-	},
-	{
-		role: "Independent Contributor",
-		company: "Nimble.la",
-		period: "2019–2021",
-		href: "#nimble-2",
-	},
-	{
-		role: "Software Engineer",
-		company: "Gartner",
-		period: "2021–2023",
-		href: "#gartner-1",
 	},
 	{
 		role: "Senior Software Engineer",
 		company: "Gartner",
-		period: "2023–2025",
-		href: "#gartner-2",
+		period: "2021–2025",
+		href: "#gartner-1",
 	},
 	{
-		role: "Senior Frontend Engineer",
+		role: "Senior Software Engineer",
 		company: "Farmacia Duret",
 		period: "2026–Present",
 		href: "#farmacia-duret",
@@ -35,7 +23,7 @@ const Timeline = () => (
 	<section className="timeline">
 		<div className="timeline__track">
 			{steps.map((step) => (
-				<a className="timeline__step" href={step.href} key={step.role}>
+				<a className="timeline__step" href={step.href} key={step.company}>
 					<span className="timeline__dot" />
 					<span className="timeline__role">{step.role}</span>
 					<span className="timeline__company">{step.company}</span>

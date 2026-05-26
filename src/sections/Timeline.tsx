@@ -15,7 +15,7 @@ const steps = [
 		role: "Senior Software Engineer",
 		company: "Farmacia Duret",
 		period: "2026–Present",
-		href: "#farmacia-duret",
+		href: "#consulting",
 	},
 ];
 

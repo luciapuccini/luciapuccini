@@ -1,38 +1,28 @@
 const Experience = () => (
 	<section className="experience" id="experience">
-		<article className="project-card" id="farmacia-duret">
-			<h3 className="project-card__title">Senior Frontend Engineer | Consultant</h3>
+		<article className="project-card" id="consulting">
+			<h3 className="project-card__title">Senior Software Engineer | Consultant</h3>
 			<p className="project-card__meta">
-				<span className="project-card__role">Farmacia Duret</span>
-				<span className="project-card__project">Web Platform</span>
+				<span className="project-card__role">Independent</span>
+				<span className="project-card__project">2026–Present</span>
 			</p>
 			<p>
-				Building Farmacia Duret&apos;s web platform — catalog content and online
-				ordering flow for an independent pharmacy in Buenos Aires, routing
-				customer orders directly to WhatsApp.
+				Selected consulting work for small businesses. Some client projects are showcased in the{" "}
+				<a href="/projects">Projects</a> section.
 			</p>
 			<ul>
 				<li>
-					Built with Next.js and TypeScript, deployed to Cloudflare Workers for
-					fully server-side rendering at the edge.
+					Consulted on frontend architecture, performance, and full-stack delivery. Close partnership with clients to best fit the solution to their needs.
 				</li>
 				<li>
-					Integrated Meta&apos;s WhatsApp Cloud API for templated order
-					notifications, backed by Contentful for catalog management.
+					Built and shipped production web applications with Next.js, TypeScript, and full ownership of infrastructure and CI/CD pipelines.
 				</li>
 				<li>
-					Set up a Vitest + Playwright test suite covering critical ordering
-					flows.
+					Delivered end-to-end features integrating third-party APIs, CMS
+					platforms, and automated notification systems.
 				</li>
-				<li>
-					Delivered a separate staff back-office for order management, gated
-					behind Cloudflare Access.
-				</li>
+				
 			</ul>
-			<p className="project-card__stack">
-				Stack: Next.js, TypeScript, Cloudflare Workers, Contentful, WhatsApp
-				Cloud API, Vitest, Playwright.
-			</p>
 		</article>
 
 		<article className="project-card" id="gartner-2">

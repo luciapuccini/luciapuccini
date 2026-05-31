@@ -1,9 +1,13 @@
 import { useState } from "react";
 
-const cvPdfEN = new URL("../assets/Lucia_Puccini_Resume_EN.pdf", import.meta.url)
-	.href;
-const cvPdfES = new URL("../assets/Lucia_Puccini_Resume_ES.pdf", import.meta.url)
-	.href;
+const cvPdfEN = new URL(
+	"../assets/Lucia_Puccini_Resume_EN.pdf",
+	import.meta.url,
+).href;
+const cvPdfES = new URL(
+	"../assets/Lucia_Puccini_Resume_ES.pdf",
+	import.meta.url,
+).href;
 
 interface SidebarProps {
 	profilePic: string;
@@ -108,7 +112,7 @@ const CopyPhone = ({ phone }: { phone: string }) => {
 	);
 };
 
-const Sidebar = ({ profilePic,  children }: SidebarProps) => (
+const Sidebar = ({ profilePic, children }: SidebarProps) => (
 	<aside className="sidebar">
 		<img
 			src={profilePic}

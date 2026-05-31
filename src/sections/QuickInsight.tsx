@@ -9,7 +9,8 @@ const ollama = new Ollama({
 });
 const MODEL = "gemma4:31b-cloud";
 
-const SYSTEM_PROMPT = `You write short portfolio bio summaries. Output only the summary — no preamble, no commentary, no meta-text.`;
+const SYSTEM_PROMPT =
+	"You write short portfolio bio summaries. Output only the summary — no preamble, no commentary, no meta-text.";
 
 const IconClose = () => (
 	<svg

@@ -1,41 +1,68 @@
 const Experience = () => (
 	<section className="experience" id="experience">
 		<article className="project-card" id="consulting">
-			<h3 className="project-card__title">Senior Software Engineer | Consultant</h3>
+			<h3 className="project-card__title">Senior Software Engineer</h3>
 			<p className="project-card__meta">
-				<span className="project-card__role">Independent</span>
-				<span className="project-card__project">2026–Present</span>
+				<span className="project-card__role">Self-employed</span>
+				<span className="project-card__project">Present</span>
 			</p>
 			<p>
-				Selected consulting work for small businesses. Some client projects are showcased in the{" "}
-				<a href="/projects">Projects</a> section.
+				Selected consulting work for small businesses. Some client projects are
+				showcased in the{" "}
+				<a className="project-card__name-link" href="/projects">
+					Projects section.
+					<svg
+						className="project-entry__arrow"
+						width="14"
+						height="14"
+						viewBox="0 0 14 14"
+						fill="none"
+						aria-hidden="true"
+					>
+						<path
+							d="M2.5 11.5L11.5 2.5M11.5 2.5H5M11.5 2.5V9"
+							stroke="currentColor"
+							strokeWidth="1.5"
+							strokeLinecap="round"
+							strokeLinejoin="round"
+						/>
+					</svg>
+				</a>
 			</p>
 			<ul>
 				<li>
-					Consulted on frontend architecture, performance, and full-stack delivery. Close partnership with clients to best fit the solution to their needs.
+					Consulted on frontend architecture, performance, and full-stack
+					delivery. Close partnership with clients to best fit the solution to
+					their needs.
 				</li>
 				<li>
-					Built and shipped production web applications with Next.js, TypeScript, and full ownership of infrastructure and CI/CD pipelines.
+					Built and shipped production web applications with Next.js,
+					TypeScript, and full ownership of infrastructure and CI/CD pipelines.
 				</li>
 				<li>
 					Delivered end-to-end features integrating third-party APIs, CMS
 					platforms, and automated notification systems.
 				</li>
-				
 			</ul>
+			<p className="project-card__stack">
+				<b>Stack:</b> React, TypeScript, Cloudflare, GitHub Actions, Claude
+				code, AI LLM providers, Postgres, Next.js.
+			</p>
 		</article>
 
 		<article className="project-card" id="gartner-2">
 			<h3 className="project-card__title">Senior Software Engineer</h3>
 			<p className="project-card__meta">
 				<span className="project-card__role">Gartner</span>
-				<span className="project-card__project">CMS</span>
+				<span className="project-card__project">
+					{" "}
+					Contact Management System{" "}
+				</span>
 			</p>
 			<p>
-				Contact Management System — a platform to unify users across four
-				Gartner Digital Markets properties (Capterra, SoftwareAdvice, GetApp,
-				and UpCity), enabling marketing to run targeted campaigns from a single
-				centralized contact list.
+				Platform to unify users across four Gartner Digital Markets properties
+				(Capterra, SoftwareAdvice, GetApp, and UpCity), enabling marketing to
+				run targeted campaigns from a single centralized contact list.
 			</p>
 			<ul>
 				<li>
@@ -45,11 +72,12 @@ const Experience = () => (
 				</li>
 				<li>
 					Ran performance and metric validations to ensure the pipeline
-					processed contacts without bottlenecks across all four properties.
+					processed contacts without bottlenecks across all four properties,
+					monitoring in Datadog.
 				</li>
 				<li>
-					Built a dashboard for marketing to easily consult and manage the
-					unified contact database.
+					Built a Next.JS dashboard for marketing to easily consult and manage
+					the unified contact database.
 				</li>
 				<li>
 					Expanded my full-stack capabilities — gained hands-on experience with
@@ -57,8 +85,8 @@ const Experience = () => (
 				</li>
 			</ul>
 			<p className="project-card__stack">
-				Stack: Kafka, TypeScript, AWS, SQS, S3, Docker, GitHub Actions, Jest,
-				Postgres, Next.js.
+				<b>Stack:</b> Kafka, TypeScript, AWS, SQS, S3, Docker, GitHub Actions,
+				Jest, Postgres, Next.js.
 			</p>
 		</article>
 
@@ -74,41 +102,36 @@ const Experience = () => (
 				software solutions.
 			</p>
 			<p>
-				Working closely with product, design, and marketing, I focused on
-				identifying the smallest efforts with the biggest impact — from caching
-				blog posts to refactoring components with nested links that could cause
-				Google to penalize our site. Every feature release was carefully
-				measured through A/B testing and feature flags to avoid impacting
-				production.
+				I focused on the Next.JS website, working closely with product, design,
+				and marketing, to improve the organic metrics and paid campaigns. Every
+				feature release was carefully measured through A/B testing.
+			</p>
+
+			<p>
+				My responsabilities included: Contributed to the migration from Material
+				UI to custom Sass modules in close alignment with figma's custom library
+				created for our project.
 			</p>
 			<ul>
 				<li>
-					Volunteered for cross-domain brainstorming sessions across Gartner
-					Digital Markets, leading to the implementation of AI-generated
-					summaries from user reviews to boost organic traffic
+					Cross-domain brainstorming sessions across Gartner Digital Markets,
+					leading to the implementation of AI-generated summaries from user
+					reviews to boost organic traffic.
 				</li>
 				<li>
-					Drove WCAG 2.1 compliance efforts. Set up weekly accessibility reports
-					on high-traffic pages, identified gaps, and partnered with design and
-					SEO to fix contrast ratios, alt text, fonts, and semantic HTML across
-					shared components
+					Drove WCAG 2.1 compliance efforts. Set up weekly browserstack
+					accessibility reports on high-traffic pages, identified gaps, and
+					partnered with design and SEO to fix shared components
 				</li>
 				<li>
-					Contributed to the migration from Material UI to custom Sass modules,
-					advocating for clean server-rendered HTML and strict design token
-					compliance over utility-class alternatives
-				</li>
-				<li>
-					Reduced duplicated content and extended product pages to improve SEO
-					positioning and user experience
-				</li>
-				<li>
-					Technical evaluation of migrating Next.js to App directory approach
+					Contributed to the incremental migration from Material UI to custom
+					Sass modules in close alignment with figma's custom library created
+					for our project.
 				</li>
 			</ul>
 			<p className="project-card__stack">
-				Stack: Next.js, TypeScript, SASS modules, GTM, GA, LaunchDarkly, Redis,
-				Cloudflare, DebugBear, Percy, GraphQL.
+				<b>Stack:</b> Next.js,React, TypeScript, SASS modules, GTM, GA,
+				LaunchDarkly, Redis, Cloudflare, DebugBear, Percy, GraphQL, AWS S3.
 			</p>
 		</article>
 
@@ -119,16 +142,16 @@ const Experience = () => (
 				<span className="project-card__project">Update AI</span>
 			</p>
 			<p>
-				Trusted as an independent contributor working directly with the client,
-				I led the front-end for a Zoom Marketplace plugin built during COVID. We
-				were among the first teams to integrate with Zoom&apos;s beta extension
-				APIs, collaborating directly with their team on the integration.
+				UpdateAI is an AI-powered platform designed to enhance customer success
+				teams' productivity by automating meeting notes, insights, and
+				follow-ups, enabling better decision-making. We were among the first
+				teams to integrate with Zoom&apos;s beta extension APIs, collaborating
+				directly with their team on the integration.
 			</p>
 			<p>
-				The plugin captured real-time meeting audio via WebSockets, streamed it
-				to our backend for AI analysis, and delivered meeting summaries, talking
-				points, insights, and action items — all tied to the original agenda.
-				Desktop app embedded with Electron.
+				The electron plugin captured real-time meeting audio via WebSockets,
+				streamed it to our backend for AI analysis, and delivered meeting
+				summaries, talking points, insights, and action items.
 			</p>
 			<p>
 				Supported the Data team by building a feedback dashboard to review
@@ -136,8 +159,8 @@ const Experience = () => (
 				stages.
 			</p>
 			<p className="project-card__stack">
-				Stack: Kafka, TypeScript, SQS, S3, Docker, GitHub Actions, Jest,
-				Postgres, Next.js, Electron, React, Socket.io.
+				<b>Stack:</b> Electron, React, Socket.io, TypeScript, Docker, GitHub
+				Actions, Jest, Postgres.
 			</p>
 		</article>
 
@@ -154,21 +177,21 @@ const Experience = () => (
 			</p>
 			<ul className="story-list">
 				<li>
-					Built cost-efficient MVPs to validate startup ideas in early stages,
-					focusing on what users actually needed over what founders assumed.
+					Colaborated in cost-efficient MVPs to validate startup ideas in early
+					stages, leveraging newest tecnologies and practices.
 				</li>
 				<li>
 					Delivered multiple products across different domains in a fast-paced
-					environment, iterating quickly based on data-informed decisions.
+					environment, iterating quickly as part of agile teams.
 				</li>
 				<li>
-					Learned how to find pragmatic solutions with limited resources —
-					skills that carried through the rest of my career.
+					Gained experience with multiple client solutions: mobile hybrid apps,
+					desktop applications, web applications
 				</li>
 			</ul>
 			<p className="project-card__stack">
-				Stack: React.JS, Node.JS, Styled-Components, Formik, Typescript, Redux,
-				React-Native
+				<b>Stack:</b> React.JS, Node.JS, Styled-Components, Formik, Typescript,
+				Redux, Graphql React-Native
 			</p>
 		</article>
 	</section>

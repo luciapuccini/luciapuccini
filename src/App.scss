@@ -178,8 +178,13 @@
 }
 
 @keyframes shimmer {
-  0% { background-position: 200% 0; }
-  100% { background-position: -200% 0; }
+  0% {
+    background-position: 200% 0;
+  }
+
+  100% {
+    background-position: -200% 0;
+  }
 }
 
 .quick-insight__error {
@@ -498,6 +503,28 @@
   margin: $spacing-xs 0 0;
   color: $color-muted;
   font-size: $font-size-sm;
+}
+
+.project-card__name-link {
+  display: inline-flex;
+  align-items: center;
+  gap: $spacing-xs;
+  color: $color-secondary;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: $color-primary;
+
+    .project-entry__arrow {
+      transform: translate(3px, -3px);
+    }
+  }
+}
+
+.project-card__arrow {
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+  color: $color-primary;
 }
 
 .philosophy {

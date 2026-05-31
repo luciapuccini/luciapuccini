@@ -6,7 +6,6 @@ import QuickInsight from "./sections/QuickInsight";
 import Sidebar from "./sections/Sidebar";
 import Timeline from "./sections/Timeline";
 
-
 const profilePic = import.meta.env.DEV
 	? "images/profile-pic.webp"
 	: "https://luciapuccini.com/.netlify/images?url=/images/profile-pic.webp&w=260&q=80";
@@ -62,8 +61,10 @@ function HomePage() {
 							<span className="hero__eyebrow">Senior Software Engineer</span>
 
 							<p className="hero__sub">
-								I help teams move fast by focusing on solutions that are simple,
-								measurable, and aligned with business goals.
+								7+ years of experience building web applications with modern
+								frontend tools. Experienced in product facing and enterprise
+								style environments, working closely with product, design, QA,
+								and backend teams.
 							</p>
 							<div className="hero__skills">
 								{skills.slice(0, HERO_SKILL_COUNT).map((skill) => (

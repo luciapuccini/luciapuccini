@@ -76,7 +76,7 @@ const Experience = () => (
 					monitoring in Datadog.
 				</li>
 				<li>
-					Built a Next.JS dashboard for marketing to easily consult and manage
+					Built a Next.js dashboard for marketing to easily consult and manage
 					the unified contact database.
 				</li>
 				<li>
@@ -102,14 +102,14 @@ const Experience = () => (
 				software solutions.
 			</p>
 			<p>
-				I focused on the Next.JS website, working closely with product, design,
+				I focused on the Next.js website, working closely with product, design,
 				and marketing, to improve the organic metrics and paid campaigns. Every
 				feature release was carefully measured through A/B testing.
 			</p>
 
 			<p>
-				My responsabilities included: Contributed to the migration from Material
-				UI to custom Sass modules in close alignment with figma's custom library
+				My responsibilities included: Contributed to the migration from Material
+				UI to custom Sass modules in close alignment with Figma's custom library
 				created for our project.
 			</p>
 			<ul>
@@ -125,7 +125,7 @@ const Experience = () => (
 				</li>
 				<li>
 					Contributed to the incremental migration from Material UI to custom
-					Sass modules in close alignment with figma's custom library created
+					Sass modules in close alignment with Figma's custom library created
 					for our project.
 				</li>
 			</ul>
@@ -177,8 +177,8 @@ const Experience = () => (
 			</p>
 			<ul className="story-list">
 				<li>
-					Colaborated in cost-efficient MVPs to validate startup ideas in early
-					stages, leveraging newest tecnologies and practices.
+					Collaborated in cost-efficient MVPs to validate startup ideas in early
+					stages, leveraging newest technologies and practices.
 				</li>
 				<li>
 					Delivered multiple products across different domains in a fast-paced

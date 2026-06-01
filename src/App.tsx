@@ -197,7 +197,6 @@ function HomePage() {
 							))}
 						</div>
 					</section>
-
 					<section className="skills">
 						<h2 className="skills__title">Additional Information</h2>
 						<div className="skills__groups">
@@ -217,7 +216,7 @@ function HomePage() {
 								</div>
 							</section>
 							<section className="skills__group">
-								<h3 className="skills__group-title">Additional Information</h3>
+								<h3 className="skills__group-title">Work Authorization</h3>
 								<div className="skills__grid">
 									<span className="skill-pill">EU Citizenship (Italian)</span>
 								</div>

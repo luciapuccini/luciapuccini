@@ -21,3 +21,6 @@
 
 [images]
   remote_images = []
+
+[[plugins]]
+  package = "@netlify/plugin-lighthouse"

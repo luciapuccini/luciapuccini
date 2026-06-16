@@ -4,10 +4,6 @@ const cvPdfEN = new URL(
 	"../assets/Lucia_Puccini_Resume_EN.pdf",
 	import.meta.url,
 ).href;
-const cvPdfES = new URL(
-	"../assets/Lucia_Puccini_Resume_ES.pdf",
-	import.meta.url,
-).href;
 
 interface SidebarProps {
 	profilePic: string;
@@ -131,14 +127,7 @@ const Sidebar = ({ profilePic, children }: SidebarProps) => (
 			>
 				<IconDownload /> CV (EN)
 			</a>
-			<a
-				className="sidebar__link"
-				href={cvPdfES}
-				download
-				title="Download CV (ES)"
-			>
-				<IconDownload /> CV (ES)
-			</a>
+
 			<hr className="sidebar__divider" />
 			<a
 				className="sidebar__link"

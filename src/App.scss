@@ -392,6 +392,25 @@
   color: $color-muted;
 }
 
+.skills__groups {
+  display: grid;
+  gap: $spacing-md;
+}
+
+.skills__group {
+  display: grid;
+  gap: $spacing-xs;
+}
+
+.skills__group-title {
+  margin: 0;
+  color: $color-primary;
+  font-size: $font-size-sm;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
 .skills__grid {
   display: flex;
   flex-wrap: wrap;

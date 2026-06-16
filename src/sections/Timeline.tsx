@@ -1,7 +1,7 @@
 const steps = [
 	{
 		role: "Frontend Engineer",
-		company: "Nimble.la",
+		company: "Nimble.LA",
 		period: "2018–2021",
 		href: "#nimble-1",
 	},

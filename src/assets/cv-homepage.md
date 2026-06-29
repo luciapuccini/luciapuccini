@@ -8,13 +8,13 @@ Senior Software Engineer
 
 - Frontend Engineer, Nimble.LA (2018–2021)
 - Senior Software Engineer, Gartner (2021–2025)
-- Senior Software Engineer, Consulting (Present)
+- Software Engineer, Consulting (Present)
 
 ## Experience
 
-### Senior Software Engineer
+### Software Engineer
 
-**Self-employed**  
+**Self-employed**
 **Present**
 
 Selected consulting work for small businesses. Some client projects are showcased in the [Projects section](/projects).
@@ -27,7 +27,7 @@ Selected consulting work for small businesses. Some client projects are showcase
 
 ### Senior Software Engineer
 
-**Gartner**  
+**Gartner**
 **Contact Management System**
 
 Platform to unify users across four Gartner Digital Markets properties (Capterra, SoftwareAdvice, GetApp, and UpCity), enabling marketing to run targeted campaigns from a single centralized contact list.
@@ -41,7 +41,7 @@ Platform to unify users across four Gartner Digital Markets properties (Capterra
 
 ### Software Engineer
 
-**Gartner**  
+**Gartner**
 **GetApp**
 
 GetApp is a software discovery platform serving millions of users, helping businesses find, compare, and read user reviews about B2B software solutions.
@@ -58,7 +58,7 @@ My responsibilities included: Contributed to the migration from Material UI to c
 
 ### Software Engineer
 
-**Nimble.LA**  
+**Nimble.LA**
 **Update AI**
 
 UpdateAI is an AI-powered platform designed to enhance customer success teams' productivity by automating meeting notes, insights, and follow-ups, enabling better decision-making. We were among the first teams to integrate with Zoom's beta extension APIs, collaborating directly with their team on the integration.
@@ -71,7 +71,7 @@ Supported the Data team by building a feedback dashboard to review text-digested
 
 ### Frontend Developer
 
-**Nimble.LA**  
+**Nimble.LA**
 **Startups**
 
 A software factory in Los Angeles focused on helping startups validate and scale their products. Part of a distributed team across Argentina and LA, building for clients who needed to move fast on tight budgets.

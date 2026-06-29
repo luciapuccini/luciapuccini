@@ -1,0 +1,105 @@
+# Lucia Puccini — Resume (source: Lucia_Puccini_Resume_EN.pdf)
+
+## Contact
+
+- **Name:** Lucia Puccini
+- **Title:** Software Engineer | Frontend
+- **Location:** Barcelona, Spain
+- **Phone:** +34 675 512 388
+- **Email:** puccinilucia@gmail.com
+- **Website:** https://luciapuccini.com/
+- **LinkedIn:** https://www.linkedin.com/in/luciapuccini/
+- **GitHub:** https://github.com/luciapuccini
+
+## Professional Summary
+
+ Software Engineer with 7+ years of experience building high-performance web applications. Deep expertise in React, Next.js, TypeScript, and frontend architecture in production front-end applications. Proven track record in web performance optimization, technical SEO, cross-functional collaboration, and delivering data-driven features. Passionate about leveraging AI to automate workflows and enhance user experience.
+
+## ATS Keywords — Technical Stack
+
+Comma-separated keywords for applicant tracking systems and role matching:
+
+**Frontend:** JavaScript (ES6+), TypeScript, HTML5, CSS3, React, Next.js, Server-Side Rendering (SSR), Static Site Generation (SSG), Streaming UI, Redux, Zustand, Zod, Tailwind CSS, SASS, Flexbox, Responsive Design, shadcn/ui, Vite, Jest, Vitest, React Testing Library, Percy, Storybook, Cypress
+
+**AI & LLM:** OpenAI API, Anthropic, Hugging Face, LangChain, LangGraph, Generative AI, Large Language Models (LLM), LLM Integration, Prompt Engineering, AI Agents, AI-Powered Automation, Retrieval-Augmented Generation (RAG), Pinecone
+
+**Backend & Infrastructure:** Node.js, Python, REST APIs, GraphQL, tRPC, Kafka, SQS, Redis, PostgreSQL, S3, Docker, Monorepo (npm workspaces), Microfrontends, Git, GitHub, GitHub Actions, CI/CD, AWS, EC2, Vercel, Cloudflare
+
+**Performance & Quality:** Web Performance Optimization, Core Web Vitals (CWV), Lighthouse, React Profiler, DevTools, Code Splitting, Bundle Optimization, Accessibility (WCAG), Technical SEO, A/B Testing, LaunchDarkly
+
+**Tools & Practices:** Agile, Jira, Code Reviews, Technical Specifications, Cross-Functional Collaboration, Slack, Datadog, Cursor, Claude Code
+
+## Technical Skills
+
+### Frontend
+
+JavaScript (ES6+), TypeScript, HTML5, CSS3, React, Next.js, Server-Side Rendering (SSR), Static Site Generation (SSG), Streaming UI, Client state management libraries (Redux, Zustand), Zod, Tailwind CSS, SASS, Flexbox, Responsive Design, shadcn/ui, Vite, Jest, Vitest, React Testing Library, Percy
+
+### AI & LLM Integration
+
+OpenAI API, Anthropic, Hugging Face, LangChain, Generative AI, Large Language Models (LLM), LLM Integration, Prompt Engineering, AI Agents, AI-Powered Automation, Retrieval-Augmented Generation (RAG), Pinecone
+
+### Backend & Infrastructure
+
+Node.js, Python, REST APIs, GraphQL, tRPC, Kafka, SQS, Redis, PostgreSQL, S3, Docker, Monorepo (npm workspaces), Microfrontends, Git, GitHub, GitHub Actions, CI/CD, AWS, Vercel, Cloudflare
+
+### Performance & Quality
+
+Web Performance Optimization, Core Web Vitals (CWV), Lighthouse, React Profiler, DevTools, Code Splitting, Bundle Optimization, Accessibility (WCAG), Technical SEO, A/B Testing
+
+### Tools
+
+Agile, Jira, Code Reviews, Technical Specifications, Cross-Functional Collaboration, Slack, Datadog, Cursor, Claude Code
+
+## Work Experience
+
+### Software Engineer | Consultant — Present
+
+**Small Businesses**
+
+- Consulted on frontend architecture, performance, and full-stack delivery. Close partnership with clients to best fit the solution to their needs.
+- Delivered end-to-end features integrating third-party APIs, CMS platforms, and automated notification systems.
+
+###  Software Engineer — Gartner (Oct 2021 – Dec 2025)
+
+**GetApp.com**
+
+Owned frontend architecture for a B2B software discovery platform serving high-traffic organic search, using React, Next.js, and GraphQL.
+
+- Partnered with design to implement and maintain a custom SASS design system, documented and tested in Storybook
+- Drove technical SEO and web performance fixing structural issues that were penalizing organic traffic
+- Proactively worked with product on rapid experimentation (LaunchDarkly A/B testing), proposing high-impact, low-effort technical improvements aligned with business goals
+- Experimented with LLM integration and generative AI review summaries as part of the organic growth strategy
+- Applied testing practices with Jest and Cypress (end-to-end)
+
+**Other relevant projects:**
+
+- Delivered an AI chatbot proof-of-concept from product ideation to full demo rollout. Built a Retrieval-Augmented Generation (RAG) using OpenAI API, Pinecone vector database, and LangChain/LangGraph for orchestration, Vite frontend interface styled in Tailwind CSS and backend in Python. Deployed Docker containers in AWS EC2
+- Partnered with marketing to build a system consolidating customer profiles from multiple websites, enabling targeted campaigns for high-value users. Worked across the full stack with event-driven architecture: Kafka, SQS, PostgreSQL, Docker, and CI/CD pipelines (GitHub Actions)
+
+### Front End Developer — Nimble.la (Sep 2018 – Aug 2021)
+
+**Startups**
+
+- Collaborated in cost-efficient MVPs to validate startup ideas in early stages, architecting React & TypeScript front ends and integrating REST APIs within agile, product-oriented teams
+- Delivered multiple products across different domains in a fast-paced environment, iterating quickly while applying good practices, testing, and scalability principles to keep codebases maintainable
+- Gained experience with multiple client solutions: mobile hybrid apps, desktop applications, web applications
+
+## Education
+
+Degree in Engineering Information Systems at National Technological University ("Universidad Tecnológica Nacional" - UTN), Rosario, Argentina
+
+## Certifications
+
+- JavaScript: The Hard Parts, v3 — FrontEnd Masters (May 2026)
+- React Performance, v2 — FrontEnd Masters (Jun 2026)
+
+## Languages
+
+- Spanish
+- English Cambridge First Certificate in English (FCE) at Grade A, which the certificate explicitly states demonstrates CEFR C1 level
+
+## Additional Information
+
+- EU Citizenship (Italian) — eligible to work across the European Union
+- Open to relocate

@@ -1,0 +1,28 @@
+# Lucia Puccini
+
+> Senior Software Engineer (7+ years) specializing in React, Next.js, TypeScript, web performance, technical SEO, and AI/LLM integration. Based in Barcelona, Spain. EU work authorization. Source of truth: resume PDF (mirrored in llms-full.txt).
+
+Lucia Puccini is a frontend-focused software engineer with production experience at Gartner (GetApp) and Nimble.la, plus ongoing consulting work. This file helps LLMs and ATS parsers find structured resume data without scraping the React SPA.
+
+**Preferred parsing:** Read [llms-full.txt](https://luciapuccini.com/llms-full.txt) first — it mirrors the canonical PDF resume with ATS keyword blocks and full work history.
+
+## ATS Stack Keywords
+
+Primary technologies for role matching (exact spellings from resume):
+
+React, Next.js, TypeScript, JavaScript, HTML5, CSS3, Node.js, Python, GraphQL, REST APIs, tRPC, Kafka, PostgreSQL, Redis, Docker, AWS, GitHub Actions, CI/CD, Tailwind CSS, SASS, Jest, Cypress, Vitest, OpenAI API, LangChain, RAG, Pinecone, Vercel, Cloudflare, Web Performance, Core Web Vitals, Technical SEO, WCAG, A/B Testing
+
+## Resume
+
+- [Full resume (llms-full.txt)](https://luciapuccini.com/llms-full.txt): Complete machine-readable resume — contact, summary, ATS keywords, skills, experience, education, certifications
+
+## Site
+
+- [Homepage](https://luciapuccini.com/): Interactive portfolio with experience timeline, skills, and contact sidebar
+- [Projects](https://luciapuccini.com/projects): Consulting and side projects with tech stacks
+
+## Optional
+
+- [LinkedIn](https://www.linkedin.com/in/luciapuccini/): Professional profile
+- [GitHub](https://github.com/luciapuccini): Open-source and project code
+- [Email](mailto:puccinilucia@gmail.com): puccinilucia@gmail.com

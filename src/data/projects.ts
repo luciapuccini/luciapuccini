@@ -25,16 +25,24 @@ export const projects: Project[] = [
       "TypeScript",
       "SCSS Modules",
       "Cloudflare Workers",
-      "Telegram Bot API",
+      "WhatsApp Business API",
     ],
     screenshot: "/images/farmacia_duret.webp",
   },
-  // {
-  // 	name: "StrengthSync",
-  // 	url: "https://strengthsync.ai",
-  // 	description:
-  // 		"Pre-launch landing for an AI-powered strength training platform that pairs a real personal trainer with an Apple Health–synced dashboard. Under development.",
-  // 	stack: ["Next.js 16", "TypeScript", "Tailwind v4", "shadcn/radix UI"],
-  // 	screenshot: "/images/strengthsync.webp",
-  // },
+  {
+    name: "StrengthSync",
+    url: "https://strengthsync-chat.puccinilucia.workers.dev",
+    description:
+      "Pre-launch landing for an AI-powered strength training platform. Under development.",
+    stack: [
+      "Cloudflare",
+      "Vercel AI SDK",
+      "TypeScript",
+      "Tailwind v4",
+      "shadcn/radix UI",
+      "Temporal",
+      "Vercel",
+    ],
+    screenshot: "/images/strengthsync.webp",
+  },
 ];

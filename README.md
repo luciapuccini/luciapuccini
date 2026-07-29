@@ -4,7 +4,7 @@
 
 [![Portfolio](https://img.shields.io/badge/Portfolio-luciapuccini.netlify.app-2ea44f)](https://luciapuccini.com/)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-luciapuccini-0a66c2)](https://www.linkedin.com/in/luciapuccini/)
-[![Netlify Status](https://api.netlify.com/api/v1/badges/5156d8c9-508c-4d14-bc9b-e8ec9badb442/deploy-status)](https://app.netlify.com/projects/luciapuccini/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/3a6e12b2-1f14-4112-b130-b696ab40ed24/deploy-status)](https://app.netlify.com/projects/luciapuccini/deploys)
 
 Frontend engineer with **7+ years** building production web applications in
 product-facing and enterprise environments. Focused on frontend architecture,

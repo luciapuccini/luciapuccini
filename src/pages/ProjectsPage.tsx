@@ -101,6 +101,34 @@ const ProjectsPage = () => {
 											</a>
 										</h2>
 
+										{project.githubUrl ? (
+											<a
+												href={project.githubUrl}
+												target="_blank"
+												rel="noopener noreferrer"
+												className="project-entry__github"
+												aria-label={`${project.name} on GitHub (opens in a new tab)`}
+											>
+												GitHub
+												<svg
+													className="project-entry__arrow"
+													width="14"
+													height="14"
+													viewBox="0 0 14 14"
+													fill="none"
+													aria-hidden="true"
+												>
+													<path
+														d="M2.5 11.5L11.5 2.5M11.5 2.5H5M11.5 2.5V9"
+														stroke="currentColor"
+														strokeWidth="1.5"
+														strokeLinecap="round"
+														strokeLinejoin="round"
+													/>
+												</svg>
+											</a>
+										) : null}
+
 										<p className="project-entry__description">
 											{project.description}
 										</p>

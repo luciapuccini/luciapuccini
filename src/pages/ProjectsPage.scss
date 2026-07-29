@@ -175,6 +175,24 @@
 	color: $color-primary;
 }
 
+.project-entry__github {
+	display: inline-flex;
+	align-items: center;
+	gap: $spacing-xs;
+	margin-top: $spacing-xs;
+	color: $color-muted;
+	font-size: $font-size-sm;
+	transition: color 0.2s ease;
+
+	&:hover {
+		color: $color-primary;
+
+		.project-entry__arrow {
+			transform: translate(3px, -3px);
+		}
+	}
+}
+
 .project-entry__description {
 	margin: 0;
 	color: $color-muted;

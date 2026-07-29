@@ -1,6 +1,7 @@
 export interface Project {
   name: string;
   url: string;
+  githubUrl?: string;
   description: string;
   stack: string[];
   screenshot: string | null;
@@ -32,6 +33,7 @@ export const projects: Project[] = [
   {
     name: "StrengthSync",
     url: "https://strengthsync-chat.puccinilucia.workers.dev",
+    githubUrl: "https://github.com/luciapuccini/strengthsync-chat",
     description:
       "Pre-launch landing for an AI-powered strength training platform. Under development.",
     stack: [

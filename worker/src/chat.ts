@@ -14,6 +14,11 @@ export type AiRunInput = {
 };
 
 export const MAX_OUTPUT_TOKENS = 512;
+export const SESSION_BUDGET = 8;
+
+export type SessionBudgetStore = Map<string, number>;
+
+const defaultSessionStore: SessionBudgetStore = new Map();
 
 export type AiBinding = {
 	run(
@@ -87,6 +92,34 @@ function parseMessages(body: unknown): ChatMessage[] | null {
 	return messages;
 }
 
+function parseSessionId(body: unknown): string | null {
+	if (typeof body !== "object" || body === null) return null;
+	const sessionId = (body as Record<string, unknown>).sessionId;
+	if (typeof sessionId !== "string" || sessionId.trim() === "") return null;
+	return sessionId;
+}
+
+export function rejectBudget(origin: string): Response {
+	return Response.json(
+		{
+			error: "Session question budget exhausted",
+			code: "budget_exhausted",
+		},
+		{ status: 429, headers: corsHeaders(origin) },
+	);
+}
+
+/** Consume one user-message slot. Returns false when the session is already at cap. */
+export function tryConsumeSessionBudget(
+	store: SessionBudgetStore,
+	sessionId: string,
+): boolean {
+	const used = store.get(sessionId) ?? 0;
+	if (used >= SESSION_BUDGET) return false;
+	store.set(sessionId, used + 1);
+	return true;
+}
+
 function toStream(
 	result: ReadableStream | Response | string,
 ): ReadableStream {
@@ -107,6 +140,7 @@ function toStream(
 export async function handleChat(
 	request: Request,
 	ai: AiBinding,
+	sessionStore: SessionBudgetStore = defaultSessionStore,
 ): Promise<Response> {
 	if (request.method !== "POST") {
 		return new Response("Method not allowed", { status: 405 });
@@ -133,6 +167,18 @@ export async function handleChat(
 			{ error: "messages array with role/content is required" },
 			{ status: 400, headers: corsHeaders(origin) },
 		);
+	}
+
+	const sessionId = parseSessionId(body);
+	if (!sessionId) {
+		return Response.json(
+			{ error: "sessionId is required" },
+			{ status: 400, headers: corsHeaders(origin) },
+		);
+	}
+
+	if (!tryConsumeSessionBudget(sessionStore, sessionId)) {
+		return rejectBudget(origin);
 	}
 
 	const withSystem: ChatMessage[] = [

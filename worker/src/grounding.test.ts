@@ -23,6 +23,7 @@ function chatRequest(content: string): Request {
 			origin: "http://localhost:3000",
 		},
 		body: JSON.stringify({
+			sessionId: "grounding-test",
 			messages: [{ role: "user", content }],
 		}),
 	});
@@ -37,7 +38,11 @@ test("POST /api/chat caps generation at about 512 tokens", async () => {
 		},
 	};
 
-	const response = await handleChat(chatRequest("What is your stack?"), ai);
+	const response = await handleChat(
+		chatRequest("What is your stack?"),
+		ai,
+		new Map(),
+	);
 
 	assert.equal(response.status, 200);
 	assert.equal(runs.length, 1);
@@ -53,7 +58,11 @@ test("POST /api/chat grounds the model in the curated pack", async () => {
 		},
 	};
 
-	const response = await handleChat(chatRequest("Where did you work?"), ai);
+	const response = await handleChat(
+		chatRequest("Where did you work?"),
+		ai,
+		new Map(),
+	);
 
 	assert.equal(response.status, 200);
 	const system = runs[0]?.messages.find((m) => m.role === "system")?.content ?? "";

@@ -6,6 +6,13 @@ import {
 } from "../chat/sendChat";
 
 const CHAT_API_URL = import.meta.env.VITE_CHAT_API_URL ?? "/api/chat";
+const SESSION_BUDGET = 8;
+const SESSION_STORAGE_KEY = "ask-lucia-session-id";
+
+const LINKEDIN_URL = "https://www.linkedin.com/in/luciapuccini/";
+const EMAIL_URL = "mailto:puccinilucia@gmail.com";
+const CV_URL = new URL("../assets/Lucia_Puccini_Resume.pdf", import.meta.url)
+	.href;
 
 const WELCOME =
 	"Ask about Lucia's roles, skills, projects, or how to get in touch. Answers stay grounded in her portfolio.";
@@ -16,6 +23,14 @@ const SUGGESTION_CHIPS = [
 	"Tell me about your projects",
 	"How can I contact you?",
 ] as const;
+
+function getOrCreateSessionId(): string {
+	const existing = sessionStorage.getItem(SESSION_STORAGE_KEY);
+	if (existing) return existing;
+	const id = crypto.randomUUID();
+	sessionStorage.setItem(SESSION_STORAGE_KEY, id);
+	return id;
+}
 
 const IconClose = () => (
 	<svg
@@ -71,6 +86,153 @@ function errorMessage(err: unknown): string {
 	return "Could not reach Ask Lucia. Try again in a moment.";
 }
 
+function userMessageCount(messages: ClientChatMessage[]): number {
+	return messages.filter((m) => m.role === "user").length;
+}
+
+function BudgetLabel({ used }: { used: number }) {
+	const remaining = Math.max(0, SESSION_BUDGET - used);
+	return (
+		<p className="ask-lucia-modal__budget" aria-live="polite">
+			{`${used}/${SESSION_BUDGET} questions used · ${remaining} left`}
+		</p>
+	);
+}
+
+function CapHandoff() {
+	return (
+		<div className="ask-lucia-modal__capped" role="status">
+			<p>
+				You used all {SESSION_BUDGET} questions in this tab. Continue the
+				conversation here:
+			</p>
+			<ul className="ask-lucia-modal__handoff">
+				<li>
+					<a href={LINKEDIN_URL} target="_blank" rel="noreferrer">
+						LinkedIn
+					</a>
+				</li>
+				<li>
+					<a href={EMAIL_URL}>Email</a>
+				</li>
+				<li>
+					<a href={CV_URL} download>
+						CV (EN)
+					</a>
+				</li>
+			</ul>
+		</div>
+	);
+}
+
+function EmptyState({
+	disabled,
+	onChip,
+}: {
+	disabled: boolean;
+	onChip: (chip: string) => void;
+}) {
+	return (
+		<div className="ask-lucia-modal__empty">
+			<p className="ask-lucia-modal__welcome">{WELCOME}</p>
+			<fieldset className="ask-lucia-modal__chips" aria-label="Suggested questions">
+				{SUGGESTION_CHIPS.map((chip) => (
+					<button
+						key={chip}
+						type="button"
+						className="ask-lucia-modal__chip"
+						disabled={disabled}
+						onClick={() => onChip(chip)}
+					>
+						{chip}
+					</button>
+				))}
+			</fieldset>
+		</div>
+	);
+}
+
+function Transcript({
+	messages,
+	streaming,
+	error,
+	atCap,
+	onChip,
+}: {
+	messages: ClientChatMessage[];
+	streaming: boolean;
+	error: string;
+	atCap: boolean;
+	onChip: (chip: string) => void;
+}) {
+	return (
+		<div className="ask-lucia-modal__transcript">
+			{messages.length === 0 && !streaming ? (
+				<EmptyState disabled={streaming || atCap} onChip={onChip} />
+			) : null}
+			{messages.map((message) => (
+				<div
+					key={message.id}
+					className={`ask-lucia-modal__bubble ask-lucia-modal__bubble--${message.role}`}
+				>
+					{/* Plain text only — never HTML from model or user content */}
+					{message.content ||
+						(streaming && message.role === "assistant" ? "…" : null)}
+				</div>
+			))}
+			{streaming ? (
+				<p className="ask-lucia-modal__status" aria-live="polite">
+					Streaming reply…
+				</p>
+			) : null}
+			{error ? (
+				<p className="ask-lucia-modal__error" role="alert">
+					{error}
+				</p>
+			) : null}
+			{atCap ? <CapHandoff /> : null}
+		</div>
+	);
+}
+
+function ChatForm({
+	input,
+	streaming,
+	onInput,
+	onSend,
+}: {
+	input: string;
+	streaming: boolean;
+	onInput: (value: string) => void;
+	onSend: () => void;
+}) {
+	return (
+		<form
+			className="ask-lucia-modal__form"
+			onSubmit={(event) => {
+				event.preventDefault();
+				onSend();
+			}}
+		>
+			<input
+				className="ask-lucia-modal__input"
+				value={input}
+				onChange={(e) => onInput(e.target.value)}
+				placeholder="Ask a question…"
+				disabled={streaming}
+				aria-label="Message"
+			/>
+			<button
+				type="submit"
+				className="ask-lucia-modal__send"
+				disabled={streaming || !input.trim()}
+			>
+				{streaming ? "Sending…" : "Send"}
+			</button>
+		</form>
+	);
+}
+
 export function AskLuciaModal({
 	open,
 	onClose,
@@ -80,10 +242,15 @@ export function AskLuciaModal({
 	const [input, setInput] = useState("");
 	const [streaming, setStreaming] = useState(false);
 	const [error, setError] = useState("");
+	const [sessionId] = useState(getOrCreateSessionId);
+	const [budgetForcedCap, setBudgetForcedCap] = useState(false);
+
+	const used = userMessageCount(messages);
+	const atCap = budgetForcedCap || used >= SESSION_BUDGET;
 
 	const send = async (text: string) => {
 		const trimmed = text.trim();
-		if (!trimmed || streaming) return;
+		if (!trimmed || streaming || atCap) return;
 
 		const nextMessages: ClientChatMessage[] = [
 			...messages,
@@ -101,6 +268,7 @@ export function AskLuciaModal({
 		try {
 			await streamChat({
 				apiUrl: CHAT_API_URL,
+				sessionId,
 				messages: nextMessages,
 				onDelta: (delta) => {
 					setMessages((prev) => {
@@ -117,6 +285,9 @@ export function AskLuciaModal({
 				},
 			});
 		} catch (err) {
+			if (err instanceof ChatRequestError && err.code === "budget_exhausted") {
+				setBudgetForcedCap(true);
+			}
 			setError(errorMessage(err));
 		} finally {
 			setStreaming(false);
@@ -136,73 +307,25 @@ export function AskLuciaModal({
 				<IconClose />
 			</button>
 			<div className="ask-lucia-modal__content">
-				<h2 className="ask-lucia-modal__title">Ask Lucia</h2>
-				<div className="ask-lucia-modal__transcript">
-					{messages.length === 0 && !streaming ? (
-						<div className="ask-lucia-modal__empty">
-							<p className="ask-lucia-modal__welcome">{WELCOME}</p>
-							<fieldset
-								className="ask-lucia-modal__chips"
-								aria-label="Suggested questions"
-							>
-								{SUGGESTION_CHIPS.map((chip) => (
-									<button
-										key={chip}
-										type="button"
-										className="ask-lucia-modal__chip"
-										disabled={streaming}
-										onClick={() => void send(chip)}
-									>
-										{chip}
-									</button>
-								))}
-							</fieldset>
-						</div>
-					) : null}
-					{messages.map((message) => (
-						<div
-							key={message.id}
-							className={`ask-lucia-modal__bubble ask-lucia-modal__bubble--${message.role}`}
-						>
-							{/* Plain text only — never HTML from model or user content */}
-							{message.content ||
-								(streaming && message.role === "assistant" ? "…" : null)}
-						</div>
-					))}
-					{streaming ? (
-						<p className="ask-lucia-modal__status" aria-live="polite">
-							Streaming reply…
-						</p>
-					) : null}
-					{error ? (
-						<p className="ask-lucia-modal__error" role="alert">
-							{error}
-						</p>
-					) : null}
+				<div className="ask-lucia-modal__header">
+					<h2 className="ask-lucia-modal__title">Ask Lucia</h2>
+					<BudgetLabel used={used} />
 				</div>
-				<form
-					className="ask-lucia-modal__form"
-					onSubmit={(event) => {
-						event.preventDefault();
-						void send(input);
-					}}
-				>
-					<input
-						className="ask-lucia-modal__input"
-						value={input}
-						onChange={(e) => setInput(e.target.value)}
-						placeholder="Ask a question…"
-						disabled={streaming}
-						aria-label="Message"
+				<Transcript
+					messages={messages}
+					streaming={streaming}
+					error={error}
+					atCap={atCap}
+					onChip={(chip) => void send(chip)}
+				/>
+				{atCap ? null : (
+					<ChatForm
+						input={input}
+						streaming={streaming}
+						onInput={setInput}
+						onSend={() => void send(input)}
 					/>
-					<button
-						type="submit"
-						className="ask-lucia-modal__send"
-						disabled={streaming || !input.trim()}
-					>
-						{streaming ? "Sending…" : "Send"}
-					</button>
-				</form>
+				)}
 			</div>
 		</div>
 	);

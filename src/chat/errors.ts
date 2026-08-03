@@ -37,6 +37,12 @@ export function chatErrorFromBody(
 			"origin_denied",
 		);
 	}
+	if (fields?.code === "budget_exhausted") {
+		return new ChatRequestError(
+			"Question budget used: this tab allows 8 questions. Refresh for a new session, or continue via LinkedIn, email, or the CV.",
+			"budget_exhausted",
+		);
+	}
 	if (fields?.error) {
 		return new ChatRequestError(fields.error, fields.code);
 	}

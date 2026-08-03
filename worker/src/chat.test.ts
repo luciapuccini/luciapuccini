@@ -30,6 +30,7 @@ test("POST /api/chat streams assistant reply from Workers AI", async () => {
 	};
 
 	const body = {
+		sessionId: "chat-stream-test",
 		messages: [{ role: "user", content: "Who is Lucia?" }],
 	};
 	const request = new Request("http://localhost/api/chat", {
@@ -41,7 +42,7 @@ test("POST /api/chat streams assistant reply from Workers AI", async () => {
 		body: JSON.stringify(body),
 	});
 
-	const response = await handleChat(request, ai);
+	const response = await handleChat(request, ai, new Map());
 
 	assert.equal(response.status, 200);
 	assert.match(

@@ -9,6 +9,7 @@ export type ClientChatMessage = {
 
 export type StreamChatOptions = {
 	apiUrl: string;
+	sessionId: string;
 	messages: ClientChatMessage[];
 	onDelta: (text: string) => void;
 	signal?: AbortSignal;
@@ -19,6 +20,7 @@ export { ChatRequestError, chatErrorFromBody } from "./errors";
 /** POST messages to the chat Worker and stream assistant text via onDelta. */
 export async function streamChat({
 	apiUrl,
+	sessionId,
 	messages,
 	onDelta,
 	signal,
@@ -27,6 +29,7 @@ export async function streamChat({
 		method: "POST",
 		headers: { "content-type": "application/json" },
 		body: JSON.stringify({
+			sessionId,
 			messages: messages.map(({ role, content }) => ({ role, content })),
 		}),
 		signal,

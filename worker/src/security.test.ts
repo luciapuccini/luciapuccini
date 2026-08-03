@@ -37,6 +37,7 @@ function chatRequest(origin: string | null): Request {
 		method: "POST",
 		headers,
 		body: JSON.stringify({
+			sessionId: "security-test",
 			messages: [{ role: "user", content: "Who is Lucia?" }],
 		}),
 	});
@@ -47,6 +48,7 @@ test("Worker rejects chat from a disallowed origin without calling the model", a
 	const response = await handleChat(
 		chatRequest("https://evil.example"),
 		ai,
+		new Map(),
 	);
 
 	assert.equal(response.status, 403);
@@ -58,7 +60,11 @@ test("Worker rejects chat from a disallowed origin without calling the model", a
 
 test("Worker accepts localhost origin at the security gate and streams", async () => {
 	const { ai, called } = mockAi();
-	const response = await handleChat(chatRequest("http://localhost:3000"), ai);
+	const response = await handleChat(
+		chatRequest("http://localhost:3000"),
+		ai,
+		new Map(),
+	);
 
 	assert.equal(response.status, 200);
 	assert.equal(called(), true);
@@ -77,6 +83,7 @@ test("Worker accepts production site origin at the security gate", async () => {
 	const response = await handleChat(
 		chatRequest("https://luciapuccini.com"),
 		ai,
+		new Map(),
 	);
 
 	assert.equal(response.status, 200);
@@ -89,7 +96,7 @@ test("Worker accepts production site origin at the security gate", async () => {
 
 test("Worker rejects chat with no Origin header without calling the model", async () => {
 	const { ai, called } = mockAi();
-	const response = await handleChat(chatRequest(null), ai);
+	const response = await handleChat(chatRequest(null), ai, new Map());
 
 	assert.equal(response.status, 403);
 	assert.equal(called(), false);

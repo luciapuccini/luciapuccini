@@ -23,11 +23,6 @@ export default defineConfig({
 				target: "http://127.0.0.1:8787",
 				changeOrigin: true,
 			},
-			"/ollama": {
-				target: "https://ollama.com",
-				changeOrigin: true,
-				rewrite: (path) => path.replace(/^\/ollama/, ""),
-			},
 		},
 	},
 	css: {

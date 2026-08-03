@@ -8,11 +8,11 @@
 
 ## Acceptance criteria
 
-- [ ] Modal opens with a short welcome and tappable suggestion chips; a chip send behaves like a normal user message
-- [ ] New curated context pack ships with the Worker (CV, project blurbs, public LinkedIn/GitHub/email; no phone)
-- [ ] Assistant is instructed to answer only from the pack, refuse off-pack invention, match user language, and keep answers brief
-- [ ] Worker enforces ~512 max generation tokens
-- [ ] Asking about roles, skills, projects, or public contact yields pack-grounded answers; unknown topics get an honest don’t-know / handoff style reply rather than hallucination
+- [x] Modal opens with a short welcome and tappable suggestion chips; a chip send behaves like a normal user message
+- [x] New curated context pack ships with the Worker (CV, project blurbs, public LinkedIn/GitHub/email; no phone)
+- [x] Assistant is instructed to answer only from the pack, refuse off-pack invention, match user language, and keep answers brief
+- [x] Worker enforces ~512 max generation tokens
+- [x] Asking about roles, skills, projects, or public contact yields pack-grounded answers; unknown topics get an honest don’t-know / handoff style reply rather than hallucination
 
 ## Blocked by
 

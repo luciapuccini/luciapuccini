@@ -1,3 +1,5 @@
+import { CHAT_CONTEXT } from "./chat-context.ts";
+
 export type ChatRole = "system" | "user" | "assistant";
 
 export type ChatMessage = {
@@ -8,7 +10,10 @@ export type ChatMessage = {
 export type AiRunInput = {
 	messages: ChatMessage[];
 	stream: boolean;
+	max_tokens?: number;
 };
+
+export const MAX_OUTPUT_TOKENS = 512;
 
 export type AiBinding = {
 	run(
@@ -19,8 +24,18 @@ export type AiBinding = {
 
 const MODEL = "@cf/openai/gpt-oss-20b";
 
-const SYSTEM_PROMPT =
-	"You are Ask Lucia, a helpful assistant on Lucia Puccini's portfolio site. Answer briefly.";
+const SYSTEM_PROMPT = [
+	"You are Ask Lucia on Lucia Puccini's portfolio site.",
+	"Answer only from the context pack below.",
+	"If the answer is not in the pack, say you do not know from the portfolio and suggest LinkedIn, email, or the CV when useful.",
+	"Do not invent jobs, salary, phone numbers, or other private facts.",
+	"Refuse off-topic or general-purpose requests that are not about Lucia's portfolio.",
+	"Match the user's language (e.g. Spanish in, Spanish out; English in, English out).",
+	"Keep answers brief: about one short paragraph or a tight list.",
+	"",
+	"## Context pack",
+	CHAT_CONTEXT,
+].join("\n");
 
 /** Production site + local Vite ports. Control for cross-site / CSRF-style browser abuse. */
 export const ALLOWED_ORIGINS = new Set([
@@ -128,6 +143,7 @@ export async function handleChat(
 	const result = await ai.run(MODEL, {
 		messages: withSystem,
 		stream: true,
+		max_tokens: MAX_OUTPUT_TOKENS,
 	});
 
 	return new Response(toStream(result), {

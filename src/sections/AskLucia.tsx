@@ -7,6 +7,16 @@ import {
 
 const CHAT_API_URL = import.meta.env.VITE_CHAT_API_URL ?? "/api/chat";
 
+const WELCOME =
+	"Ask about Lucia's roles, skills, projects, or how to get in touch. Answers stay grounded in her portfolio.";
+
+const SUGGESTION_CHIPS = [
+	"What did you do at Gartner?",
+	"What is your tech stack?",
+	"Tell me about your projects",
+	"How can I contact you?",
+] as const;
+
 const IconClose = () => (
 	<svg
 		aria-hidden="true"
@@ -129,9 +139,25 @@ export function AskLuciaModal({
 				<h2 className="ask-lucia-modal__title">Ask Lucia</h2>
 				<div className="ask-lucia-modal__transcript">
 					{messages.length === 0 && !streaming ? (
-						<p className="ask-lucia-modal__empty">
-							Ask a question about Lucia&apos;s experience.
-						</p>
+						<div className="ask-lucia-modal__empty">
+							<p className="ask-lucia-modal__welcome">{WELCOME}</p>
+							<fieldset
+								className="ask-lucia-modal__chips"
+								aria-label="Suggested questions"
+							>
+								{SUGGESTION_CHIPS.map((chip) => (
+									<button
+										key={chip}
+										type="button"
+										className="ask-lucia-modal__chip"
+										disabled={streaming}
+										onClick={() => void send(chip)}
+									>
+										{chip}
+									</button>
+								))}
+							</fieldset>
+						</div>
 					) : null}
 					{messages.map((message) => (
 						<div

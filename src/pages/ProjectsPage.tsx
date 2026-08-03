@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import { projects } from "../data/projects";
-import QuickInsight from "../sections/QuickInsight";
 import "./ProjectsPage.scss";
 
 const ProjectsPage = () => {
@@ -18,7 +17,6 @@ const ProjectsPage = () => {
 						<Link className="nav__link" to="/projects">
 							Projects
 						</Link>
-						<QuickInsight mode="mobile" />
 					</nav>
 				</div>
 			</header>

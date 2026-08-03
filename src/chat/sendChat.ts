@@ -1,4 +1,5 @@
 import { readChatStream } from "./stream";
+import { chatErrorFromBody } from "./errors";
 
 export type ClientChatMessage = {
 	id: string;
@@ -12,6 +13,8 @@ export type StreamChatOptions = {
 	onDelta: (text: string) => void;
 	signal?: AbortSignal;
 };
+
+export { ChatRequestError, chatErrorFromBody } from "./errors";
 
 /** POST messages to the chat Worker and stream assistant text via onDelta. */
 export async function streamChat({
@@ -31,7 +34,7 @@ export async function streamChat({
 
 	if (!response.ok) {
 		const detail = await response.text().catch(() => "");
-		throw new Error(detail || `Chat request failed (${response.status})`);
+		throw chatErrorFromBody(response.status, detail);
 	}
 
 	if (!response.body) {

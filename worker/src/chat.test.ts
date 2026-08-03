@@ -34,7 +34,10 @@ test("POST /api/chat streams assistant reply from Workers AI", async () => {
 	};
 	const request = new Request("http://localhost/api/chat", {
 		method: "POST",
-		headers: { "content-type": "application/json" },
+		headers: {
+			"content-type": "application/json",
+			origin: "http://localhost:3000",
+		},
 		body: JSON.stringify(body),
 	});
 
@@ -67,7 +70,10 @@ test("POST /api/chat rejects empty messages without calling the model", async ()
 	const response = await handleChat(
 		new Request("http://localhost/api/chat", {
 			method: "POST",
-			headers: { "content-type": "application/json" },
+			headers: {
+				"content-type": "application/json",
+				origin: "http://localhost:3000",
+			},
 			body: JSON.stringify({ messages: [] }),
 		}),
 		ai,

@@ -22,6 +22,39 @@ const MODEL = "@cf/openai/gpt-oss-20b";
 const SYSTEM_PROMPT =
 	"You are Ask Lucia, a helpful assistant on Lucia Puccini's portfolio site. Answer briefly.";
 
+/** Production site + local Vite ports. Control for cross-site / CSRF-style browser abuse. */
+export const ALLOWED_ORIGINS = new Set([
+	"https://luciapuccini.com",
+	"https://www.luciapuccini.com",
+	"http://localhost:3000",
+	"http://127.0.0.1:3000",
+	"http://localhost:4173",
+	"http://127.0.0.1:4173",
+]);
+
+export function isAllowedOrigin(origin: string | null): origin is string {
+	return origin !== null && ALLOWED_ORIGINS.has(origin);
+}
+
+export function corsHeaders(origin: string): HeadersInit {
+	return {
+		"access-control-allow-origin": origin,
+		"access-control-allow-methods": "POST, OPTIONS",
+		"access-control-allow-headers": "content-type",
+		vary: "Origin",
+	};
+}
+
+export function rejectOrigin(): Response {
+	return Response.json(
+		{
+			error: "Origin not allowed for Ask Lucia chat",
+			code: "origin_denied",
+		},
+		{ status: 403 },
+	);
+}
+
 function isChatMessage(value: unknown): value is ChatMessage {
 	if (typeof value !== "object" || value === null) return false;
 	const msg = value as Record<string, unknown>;
@@ -64,18 +97,26 @@ export async function handleChat(
 		return new Response("Method not allowed", { status: 405 });
 	}
 
+	const origin = request.headers.get("origin");
+	if (!isAllowedOrigin(origin)) {
+		return rejectOrigin();
+	}
+
 	let body: unknown;
 	try {
 		body = await request.json();
 	} catch {
-		return Response.json({ error: "Invalid JSON" }, { status: 400 });
+		return Response.json(
+			{ error: "Invalid JSON" },
+			{ status: 400, headers: corsHeaders(origin) },
+		);
 	}
 
 	const messages = parseMessages(body);
 	if (!messages) {
 		return Response.json(
 			{ error: "messages array with role/content is required" },
-			{ status: 400 },
+			{ status: 400, headers: corsHeaders(origin) },
 		);
 	}
 
@@ -93,6 +134,7 @@ export async function handleChat(
 		headers: {
 			"content-type": "text/event-stream; charset=utf-8",
 			"cache-control": "no-cache",
+			...corsHeaders(origin),
 		},
 	});
 }

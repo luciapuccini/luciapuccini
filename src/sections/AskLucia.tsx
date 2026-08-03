@@ -1,5 +1,6 @@
 import { useState } from "react";
 import {
+	ChatRequestError,
 	type ClientChatMessage,
 	streamChat,
 } from "../chat/sendChat";
@@ -55,6 +56,11 @@ type ModalProps = {
 	setMessages: React.Dispatch<React.SetStateAction<ClientChatMessage[]>>;
 };
 
+function errorMessage(err: unknown): string {
+	if (err instanceof ChatRequestError) return err.message;
+	return "Could not reach Ask Lucia. Try again in a moment.";
+}
+
 export function AskLuciaModal({
 	open,
 	onClose,
@@ -100,8 +106,8 @@ export function AskLuciaModal({
 					});
 				},
 			});
-		} catch {
-			setError("Could not reach Ask Lucia. Try again in a moment.");
+		} catch (err) {
+			setError(errorMessage(err));
 		} finally {
 			setStreaming(false);
 		}
@@ -132,6 +138,7 @@ export function AskLuciaModal({
 							key={message.id}
 							className={`ask-lucia-modal__bubble ask-lucia-modal__bubble--${message.role}`}
 						>
+							{/* Plain text only — never HTML from model or user content */}
 							{message.content ||
 								(streaming && message.role === "assistant" ? "…" : null)}
 						</div>
@@ -141,7 +148,11 @@ export function AskLuciaModal({
 							Streaming reply…
 						</p>
 					) : null}
-					{error ? <p className="ask-lucia-modal__error">{error}</p> : null}
+					{error ? (
+						<p className="ask-lucia-modal__error" role="alert">
+							{error}
+						</p>
+					) : null}
 				</div>
 				<form
 					className="ask-lucia-modal__form"

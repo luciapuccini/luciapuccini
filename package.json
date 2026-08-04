@@ -11,8 +11,8 @@
 		"format": "biome format --write ./src ./vite.config.ts ./worker",
 		"typecheck": "tsc -b && tsc -p worker/tsconfig.json",
 		"test": "node --experimental-strip-types --test worker/src/**/*.test.ts",
-		"worker:dev": "wrangler dev --config worker/wrangler.toml",
-		"worker:deploy": "wrangler deploy --config worker/wrangler.toml"
+		"worker:dev": "wrangler dev --config worker/wrangler.json",
+		"worker:deploy": "wrangler deploy --config worker/wrangler.json"
 	},
 	"dependencies": {
 		"react": "^19.2.0",

@@ -20,9 +20,10 @@ for ((i=1; i<=$1; i++)); do
   issues=$(cat issues/*.md 2>/dev/null || echo "No issues found")
   prompt=$(cat ralph/prompt.md)
 
-  agent --print \
+  sbx run cursor . -- \
     --force \
     --trust \
+    --print \
     --output-format stream-json \
     "Previous commits: $commits Issues: $issues $prompt" \
   | grep --line-buffered '^{' \

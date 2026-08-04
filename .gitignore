@@ -1,0 +1,40 @@
+# Node modules
+node_modules/
+
+# Log files
+logs/
+*.log
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+.dev.vars
+
+# Cloudflare credentials (API token — use CLOUDFLARE_API_TOKEN in the shell)
+cloudflare.md
+
+# Build output
+/dist
+/build
+
+# IDE files
+.vscode/
+.idea/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Misc
+.cache
+*.bak
+*.tmp
+
+# AI
+*claude*
+.claude/worktrees/
+.cursor/*
+
+## internal files
+TODO.md

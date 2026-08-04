@@ -2,7 +2,12 @@ import { Link, Route, Routes } from "react-router-dom";
 import "./App.scss";
 import ProjectsPage from "./pages/ProjectsPage";
 import Experience from "./sections/Experience";
-import QuickInsight from "./sections/QuickInsight";
+import {
+	AskLuciaDesktopButton,
+	AskLuciaModal,
+	AskLuciaNavButton,
+	useAskLuciaChat,
+} from "./sections/AskLucia";
 import Sidebar from "./sections/Sidebar";
 import Timeline from "./sections/Timeline";
 
@@ -109,6 +114,8 @@ const skills = skillGroups.flatMap(({ items }) => items);
 const HERO_SKILL_COUNT = 4;
 
 function HomePage() {
+  const chat = useAskLuciaChat();
+
   return (
     <div className="app">
       <header className="app__header">
@@ -123,14 +130,14 @@ function HomePage() {
             <Link className="nav__link" to="/projects">
               Projects
             </Link>
-            <QuickInsight mode="mobile" />
+            <AskLuciaNavButton onOpen={() => chat.setOpen(true)} />
           </nav>
         </div>
       </header>
 
       <div className="layout">
         <Sidebar profilePic={profilePic}>
-          <QuickInsight mode="desktop" />
+          <AskLuciaDesktopButton onOpen={() => chat.setOpen(true)} />
         </Sidebar>
 
         <main className="layout__content">
@@ -231,6 +238,13 @@ function HomePage() {
           <span>&copy; {new Date().getFullYear()} Lucia Puccini.</span>
         </div>
       </footer>
+
+      <AskLuciaModal
+        open={chat.open}
+        onClose={() => chat.setOpen(false)}
+        messages={chat.messages}
+        setMessages={chat.setMessages}
+      />
     </div>
   );
 }

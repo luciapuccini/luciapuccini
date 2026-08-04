@@ -7,17 +7,20 @@
 		"dev": "vite",
 		"preview": "npm run build && vite preview",
 		"build": "tsc -b && vite build",
-		"lint": "biome lint ./src ./vite.config.ts",
-		"format": "biome format --write ./src ./vite.config.ts"
+		"lint": "biome lint ./src ./vite.config.ts ./worker",
+		"format": "biome format --write ./src ./vite.config.ts ./worker",
+		"typecheck": "tsc -b && tsc -p worker/tsconfig.json",
+		"test": "node --experimental-strip-types --test worker/src/**/*.test.ts",
+		"worker:dev": "wrangler dev --config worker/wrangler.json",
+		"worker:deploy": "wrangler deploy --config worker/wrangler.json"
 	},
 	"dependencies": {
-		"ollama": "^0.6.3",
 		"react": "^19.2.0",
 		"react-dom": "^19.2.0",
 		"react-router-dom": "7.18.2"
 	},
 	"devDependencies": {
-		"@biomejs/biome": "^1.9.4",
+		"@biomejs/biome": "^2.5.6",
 		"@types/node": "^24.13.3",
 		"@types/react": "^19.2.7",
 		"@types/react-dom": "^19.2.3",
@@ -25,6 +28,7 @@
 		"babel-plugin-react-compiler": "^1.0.0",
 		"sass": "^1.102.0",
 		"typescript": "~5.9.3",
-		"vite": "^7.3.1"
+		"vite": "^7.3.1",
+		"wrangler": "^4.118.0"
 	}
 }

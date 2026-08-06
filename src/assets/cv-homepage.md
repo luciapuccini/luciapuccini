@@ -1,14 +1,15 @@
 # Lucia Puccini
 
-Senior Software Engineer
+Software Engineer
 
-7+ years of experience building web applications with modern frontend tools. Experienced in product facing and enterprise style environments, working closely with product, design, QA, and backend teams.
+Software Engineer with 7+ years of experience building high-performance web applications. Deep expertise in React, Next.js, TypeScript, and frontend architecture in production front-end applications. Proven track record in web performance optimization, technical SEO, cross-functional collaboration, and delivering data-driven features. Passionate about leveraging AI to automate workflows and enhance user experience.
+
 
 ## Timeline
 
-- Frontend Engineer, Nimble.LA (2018–2021)
-- Senior Software Engineer, Gartner (2021–2025)
 - Software Engineer, Consulting (Present)
+- Software Engineer II, Gartner (2021–2025)
+- Frontend Engineer, Nimble.LA (2018–2021)
 
 ## Experience
 
@@ -25,9 +26,9 @@ Selected consulting work for small businesses. Some client projects are showcase
 
 **Stack:** React, TypeScript, Cloudflare, GitHub Actions, Claude code, AI LLM providers, Postgres, Next.js.
 
-### Senior Software Engineer
+### Software Engineer
 
-**Gartner**
+**Gartner Digital Markets**
 **Contact Management System**
 
 Platform to unify users across four Gartner Digital Markets properties (Capterra, SoftwareAdvice, GetApp, and UpCity), enabling marketing to run targeted campaigns from a single centralized contact list.
@@ -39,26 +40,22 @@ Platform to unify users across four Gartner Digital Markets properties (Capterra
 
 **Stack:** Kafka, TypeScript, AWS, SQS, S3, Docker, GitHub Actions, Jest, Postgres, Next.js.
 
-### Software Engineer
-
-**Gartner**
 **GetApp**
 
 GetApp is a software discovery platform serving millions of users, helping businesses find, compare, and read user reviews about B2B software solutions.
 
-I focused on the Next.js website, working closely with product, design, and marketing, to improve the organic metrics and paid campaigns. Every feature release was carefully measured through A/B testing.
+I focused on the Next.js website, working closely with product, design, and marketing, to improve the organic growth metrics and paid campaigns. Every feature release was carefully measured through A/B Experimentation.
 
-My responsibilities included: Contributed to the migration from Material UI to custom Sass modules in close alignment with Figma's custom library created for our project.
+- Cross-domain brainstorming sessions across Gartner Digital Markets, leading to the implementation of generative AI summaries from user reviews to boost organic traffic.
+- Drove technical SEO and web performance efforts with significant increase in CWV metrics, leveraging Next.js advanced rendering patterns.
+- Delivered an AI chatbot proof-of-concept, using Retrieval-Augmented Generation (RAG)OpenAI API, Pinecone vector database, and LangChain/LangGraph for orchestration, Vite frontend interface styled in Tailwind Css and Backend in Python. Deployed docker containers in AWS EC2.
 
-- Cross-domain brainstorming sessions across Gartner Digital Markets, leading to the implementation of AI-generated summaries from user reviews to boost organic traffic.
-- Drove WCAG 2.1 compliance efforts. Set up weekly browserstack accessibility reports on high-traffic pages, identified gaps, and partnered with design and SEO to fix shared components
-- Contributed to the incremental migration from Material UI to custom Sass modules in close alignment with Figma's custom library created for our project.
+**Stack:** Next.js, React, TypeScript, SASS modules, GTM, GA, LaunchDarkly, Redis, Cloudflare, DebugBear, Percy, GraphQL, AWS S3.
 
-**Stack:** Next.js,React, TypeScript, SASS modules, GTM, GA, LaunchDarkly, Redis, Cloudflare, DebugBear, Percy, GraphQL, AWS S3.
-
-### Software Engineer
+### Frontend Developer
 
 **Nimble.LA**
+
 **Update AI**
 
 UpdateAI is an AI-powered platform designed to enhance customer success teams' productivity by automating meeting notes, insights, and follow-ups, enabling better decision-making. We were among the first teams to integrate with Zoom's beta extension APIs, collaborating directly with their team on the integration.
@@ -69,9 +66,6 @@ Supported the Data team by building a feedback dashboard to review text-digested
 
 **Stack:** Electron, React, Socket.io, TypeScript, Docker, GitHub Actions, Jest, Postgres.
 
-### Frontend Developer
-
-**Nimble.LA**
 **Startups**
 
 A software factory in Los Angeles focused on helping startups validate and scale their products. Part of a distributed team across Argentina and LA, building for clients who needed to move fast on tight budgets.

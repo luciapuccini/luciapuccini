@@ -1,27 +1,26 @@
 # Lucia Puccini
 
-### Senior Frontend Engineer · React · Next.js · TypeScript
+### Software Engineer · React · Next.js · TypeScript
 
 [![Portfolio](https://img.shields.io/badge/Portfolio-luciapuccini.netlify.app-2ea44f)](https://luciapuccini.com/)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-luciapuccini-0a66c2)](https://www.linkedin.com/in/luciapuccini/)
-[![Netlify Status](https://api.netlify.com/api/v1/badges/3a6e12b2-1f14-4112-b130-b696ab40ed24/deploy-status)](https://app.netlify.com/projects/luciapuccini/deploys)
 
 Frontend engineer with **7+ years** building production web applications in
 product-facing and enterprise environments. Focused on frontend architecture,
 web performance, and accessibility, working cross-functionally with product,
-design, QA, and backend teams. EU citizen (Italian) · English & Spanish.
+design, QA, and backend teams. EU citizen · English & Spanish · Open to relocate.
 
 ## Tech Stack
 
 - **Frontend:** React, Next.js, TypeScript, JavaScript (ES6+), Redux, HTML5, CSS3, Tailwind CSS, SASS, Server-Side Rendering (SSR), Static Site Generation (SSG), Vite
 - **Testing:** Jest, Cypress, React Testing Library, Percy
 - **AI & LLM:** Retrieval-Augmented Generation (RAG), LangChain, OpenAI API, Anthropic, Prompt Engineering, LLM integration, AI agents
-- **Backend & Infra:** Node.js, Python, GraphQL, tRPC, REST APIs, Kafka, SQS, Redis, PostgreSQL, AWS, S3, Docker, CI/CD (GitHub Actions), Cloudflare, Vercel
-- **Performance & Quality:** Core Web Vitals (CWV), Lighthouse, Code Splitting, Bundle Optimization, Accessibility (WCAG 2.1), Technical SEO, A/B Testing
+- **Backend & Infra:** Node.js, GraphQL, tRPC, REST APIs, Kafka, SQS, Redis, PostgreSQL, AWS, S3, Docker, CI/CD (GitHub Actions), Cloudflare, Vercel
+- **Performance & Quality:** Core Web Vitals (CWV), Lighthouse, Code Splitting, Bundle Optimization, Accessibility (WCAG 2.1), Technical SEO, A/B Experimention
 
 ## Experience
 
-- **Senior Software Engineer — Gartner Digital Markets** (2021–2025)
+- **Software Engineer II — Gartner Digital Markets** (2021–2025)
   Built a Next.js dashboard and Kafka-based contact pipeline unifying users
   across four properties; on GetApp, drove WCAG 2.1 accessibility, A/B-tested
   releases, and shipped AI-generated review summaries to grow organic traffic.
@@ -44,10 +43,6 @@ Full timeline → [luciapuccini.netlify.app](https://luciapuccini.com/)
   site with contact form and spam protection.
   _React, TypeScript, Vite, Styled-components, Netlify._
 
-## About This Repo
-
-This profile & portfolio is a **React 19 + Vite + TypeScript** single-page app,
-deployed on Netlify
 
 ## Connect
 

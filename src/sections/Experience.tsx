@@ -51,12 +51,11 @@ const Experience = () => (
     </article>
 
     <article className="project-card" id="gartner-2">
-      <h3 className="project-card__title">Software Engineer II</h3>
+      <h3 className="project-card__title">Software Engineer</h3>
       <p className="project-card__meta">
-        <span className="project-card__role">Gartner</span>
+        <span className="project-card__role">Gartner Digital Markets</span>
         <span className="project-card__project">
-          {" "}
-          Contact Management System{" "}
+          Contact Management System
         </span>
       </p>
       <p>
@@ -80,7 +79,7 @@ const Experience = () => (
           the unified contact database.
         </li>
         <li>
-          Expanded my full-stack capabilities — gained hands-on experience with
+          Expanded my full-stack capabilities - gained hands-on experience with
           Event-driven architecture, Microservices, and backend patterns.
         </li>
       </ul>
@@ -93,7 +92,7 @@ const Experience = () => (
     <article className="project-card" id="gartner-1">
       <h3 className="project-card__title">Software Engineer</h3>
       <p className="project-card__meta">
-        <span className="project-card__role">Gartner</span>
+        <span className="project-card__role">Gartner Digital Markets</span>
         <span className="project-card__project">GetApp</span>
       </p>
       <p>
@@ -103,47 +102,43 @@ const Experience = () => (
       </p>
       <p>
         I focused on the Next.js website, working closely with product, design,
-        and marketing, to improve the organic metrics and paid campaigns. Every
-        feature release was carefully measured through A/B testing.
-      </p>
-
-      <p>
-        My responsibilities included: Contributed to the migration from Material
-        UI to custom Sass modules in close alignment with Figma's custom library
-        created for our project.
+        and marketing, to improve the organic growth metrics and paid campaigns.
+        Every feature release was carefully measured through A/B Experimentation.
       </p>
       <ul>
         <li>
           Cross-domain brainstorming sessions across Gartner Digital Markets,
-          leading to the implementation of AI-generated summaries from user
+          leading to the implementation of generative AI summaries from user
           reviews to boost organic traffic.
         </li>
         <li>
-          Drove WCAG 2.1 compliance efforts. Set up weekly browserstack
-          accessibility reports on high-traffic pages, identified gaps, and
-          partnered with design and SEO to fix shared components
+          Drove technical SEO and web performance efforts with significant
+          increase in CWV metrics, leveraging Next.js advanced rendering
+          patterns.
         </li>
         <li>
-          Contributed to the incremental migration from Material UI to custom
-          Sass modules in close alignment with Figma's custom library created
-          for our project.
+          Delivered an AI chatbot proof-of-concept, using Retrieval-Augmented
+          Generation (RAG)OpenAI API, Pinecone vector database, and
+          LangChain/LangGraph for orchestration, Vite frontend interface styled
+          in Tailwind Css and Backend in Python. Deployed docker containers in
+          AWS EC2.
         </li>
       </ul>
       <p className="project-card__stack">
-        <b>Stack:</b> Next.js,React, TypeScript, SASS modules, GTM, GA,
+        <b>Stack:</b> Next.js, React, TypeScript, SASS modules, GTM, GA,
         LaunchDarkly, Redis, Cloudflare, DebugBear, Percy, GraphQL, AWS S3.
       </p>
     </article>
 
     <article className="project-card" id="nimble-2">
-      <h3 className="project-card__title">Software Engineer</h3>
+      <h3 className="project-card__title">Frontend Developer</h3>
       <p className="project-card__meta">
         <span className="project-card__role">Nimble.LA</span>
         <span className="project-card__project">Update AI</span>
       </p>
       <p>
         UpdateAI is an AI-powered platform designed to enhance customer success
-        teams' productivity by automating meeting notes, insights, and
+        teams&apos; productivity by automating meeting notes, insights, and
         follow-ups, enabling better decision-making. We were among the first
         teams to integrate with Zoom&apos;s beta extension APIs, collaborating
         directly with their team on the integration.

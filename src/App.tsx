@@ -144,13 +144,16 @@ function HomePage() {
             />
             <div className="hero__content">
               <h1 className="hero__title">Lucia Puccini</h1>
-              <span className="hero__eyebrow">Frontend Software Engineer</span>
+              <span className="hero__eyebrow">Software Engineer</span>
 
               <p className="hero__sub">
-                7+ years of experience building web applications with modern
-                frontend tools. Experienced in product facing and enterprise
-                style environments, working closely with product, design, QA,
-                and backend teams.
+                Software Engineer with 7+ years of experience building
+                high-performance web applications. Deep expertise in React,
+                Next.js, TypeScript, and frontend architecture in production
+                front-end applications. Proven track record in web performance
+                optimization, technical SEO, cross-functional collaboration, and
+                delivering data-driven features. Passionate about leveraging AI
+                to automate workflows and enhance user experience.
               </p>
               <div className="hero__skills">
                 {skills.slice(0, HERO_SKILL_COUNT).map((skill) => (

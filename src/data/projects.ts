@@ -32,18 +32,16 @@ export const projects: Project[] = [
   },
   {
     name: "StrengthSync",
-    url: "https://strengthsync-chat.puccinilucia.workers.dev",
-    githubUrl: "https://github.com/luciapuccini/strengthsync-chat",
+    url: "https://app.strengthsync.ai/",
+    githubUrl: "https://github.com/luciapuccini/strengthsync",
     description:
-      "Pre-launch landing for an AI-powered strength training platform. Under development.",
+      "AI-powered strength training platform. Under development.",
     stack: [
       "Cloudflare",
       "Vercel AI SDK",
       "TypeScript",
       "Tailwind v4",
       "shadcn/radix UI",
-      "Temporal",
-      "Vercel",
     ],
     screenshot: "/images/strengthsync.webp",
   },

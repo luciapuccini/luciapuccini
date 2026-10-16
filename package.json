@@ -4,14 +4,13 @@
 	"version": "0.0.0",
 	"type": "module",
 	"scripts": {
-		"dev": "vite",
+		"dev": "npx netlify-cli@27.12.1 dev",
 		"preview": "npm run build && vite preview",
 		"build": "tsc -b && vite build",
-		"lint": "biome lint ./src ./vite.config.ts",
-		"format": "biome format --write ./src ./vite.config.ts"
+		"lint": "biome lint ./src ./netlify ./vite.config.ts",
+		"format": "biome format --write ./src ./netlify ./vite.config.ts"
 	},
 	"dependencies": {
-		"ollama": "^0.6.3",
 		"react": "^19.2.0",
 		"react-dom": "^19.2.0",
 		"react-router-dom": "7.18.2"

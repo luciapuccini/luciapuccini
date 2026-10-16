@@ -1,7 +1,5 @@
-.cursor
-.claude 
+.claude/settings.local.json
 .DS_Store
 node_modules
-.DS_Store
 .env
 .fallow

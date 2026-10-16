@@ -63,15 +63,11 @@ Do NOT use `gh issue create` or any GitHub CLI commands. Do NOT reference GitHub
 
 After PRD slices issues are clear, add one more to make a final swipe of the PRD implementation to answer these:
 
-  - are we on track with what we planned
-  for?
-  - any notable files or funtions that
-  diverged from our project standards and
-  notations? - are bugs or out of scope
-  side findings documented and not
-  actioned?
+  - are we on track with what we planned for?
+  - any notable files or funtions that diverged from our project standards and notations? - are bugs or out of scope side findings documented and not actioned?
   - was the documentation (/docs) updated consistently with the progress? 
   - suggested next steps?
+  - Did the user validate manually the result in dev environment?
 
 <issue-template>
 

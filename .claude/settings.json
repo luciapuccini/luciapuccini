@@ -1,0 +1,20 @@
+{
+  "extraKnownMarketplaces": {
+    "pstack-claude": {
+      "source": {
+        "source": "github",
+        "repo": "michael-denyer/pstack-claude"
+      }
+    },
+    "ui-craft": {
+      "source": {
+        "source": "github",
+        "repo": "educlopez/ui-craft"
+      }
+    }
+  },
+  "enabledPlugins": {
+    "pstack@pstack-claude": true,
+    "ui-craft@ui-craft": true
+  }
+}

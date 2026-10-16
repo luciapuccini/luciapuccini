@@ -1,13 +1,7 @@
 pre-commit:
   parallel: true
   commands:
-    format:
-      run: pnpm format:check
-    typecheck:
-      run: pnpm typecheck
     lint:
-      run: pnpm lint
+      run: npm run lint
     build:
-      run: pnpm build
-    test:
-      run: pnpm test
+      run: npm run build

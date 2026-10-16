@@ -46,6 +46,7 @@ Skills live in `.agents/skills/<name>/SKILL.md`. Read a skill's `SKILL.md` befor
 - `prd-to-issues`: split a PRD into issue files in `docs/issues/`.
 - `implement`: implement a spec or issue end to end. User-invoked only (`/implement`).
 - `troubleshooting`: diagnose bugs and regressions.
+- `verify`: run the site under `netlify dev` and drive it in a headless browser to prove a change works.
 
 Claude Code also loads plugins from `.claude/settings.json`:
 

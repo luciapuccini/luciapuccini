@@ -1,16 +1,4 @@
-import { Ollama } from "ollama/browser";
 import { useState } from "react";
-
-const ollama = new Ollama({
-	host: `${window.location.origin}/ollama`,
-	headers: {
-		Authorization: `Bearer ${import.meta.env.VITE_OLLAMA_API_KEY}`,
-	},
-});
-const MODEL = "gemma4:31b-cloud";
-
-const SYSTEM_PROMPT =
-	"You write short portfolio bio summaries. Output only the summary — no preamble, no commentary, no meta-text.";
 
 const IconClose = () => (
 	<svg
@@ -45,30 +33,24 @@ const QuickInsight = ({ mode }: { mode: "desktop" | "mobile" }) => {
 			document.querySelector(".layout__content")?.textContent?.trim() ?? "";
 
 		try {
-			const response = await ollama.chat({
-				model: MODEL,
-				messages: [
-					{ role: "system", content: SYSTEM_PROMPT },
-					{
-						role: "user",
-						content: `Write a 2-3 sentence insight about Lucia Puccini based on the following portfolio content. Highlight cross-functional collaboration, product & metrics mindset, and frontend expertise. Use humble, collegial tone (no "leader" framing). Output the insight only — no intro, no explanation.\n\n${pageText}`,
-					},
-					{ role: "assistant", content: "Lucia" },
-				],
-				options: {
-					num_predict: 200,
-					temperature: 0.7,
-					stop: ["Here is", "Note:", "I will", "I'll", "\n\n"],
-				},
+			const response = await fetch("/api/insight", {
+				method: "POST",
+				headers: { "Content-Type": "application/json" },
+				body: JSON.stringify({ pageText }),
 			});
+			const data: { insight?: string; error?: string } = await response
+				.json()
+				.catch(() => ({}));
 
-			const msg = response.message as unknown as {
-				content: string;
-				thinking?: string;
-			};
-			setInsight(msg.content || msg.thinking || "");
+			if (!response.ok) {
+				setError(
+					`Could not generate an insight (${response.status}). ${data.error ?? "Please try again later."}`,
+				);
+				return;
+			}
+			setInsight(data.insight ?? "");
 		} catch {
-			setError("Could not reach Ollama. Is it running?");
+			setError("Could not reach the insight service. Check your connection.");
 		} finally {
 			setLoading(false);
 		}

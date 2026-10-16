@@ -9,7 +9,8 @@ Personal portfolio site: React 19 + TypeScript + Vite + SCSS, deployed on Netlif
 - `src/sections/`: home page sections. `src/pages/`: other routes.
 - `src/data/projects.ts`: project content. `src/assets/`: CV markdown and PDF.
 - `src/styles/_theme.scss`: design tokens.
-- `public/`: static files served as is (`llms.txt`, images).
+- `public/`: static files served as is (`llms.txt`, images, `_redirects` SPA fallback).
+- `netlify/edge-functions/`: server code. `insight.ts` serves `/api/insight`, owns the prompt, and reads `OLLAMA_API_KEY`.
 - `dist/`: build output, committed. Do not edit by hand.
 - `docs/`: long-form notes and `docs/issues/` for PRDs and issues. Create it when needed.
 
@@ -17,7 +18,7 @@ Personal portfolio site: React 19 + TypeScript + Vite + SCSS, deployed on Netlif
 
 Package manager is **npm** (`package-lock.json`). `package.json` scripts are the source of truth.
 
-- `npm run dev`: dev server on port 3000.
+- `npm run dev`: `netlify dev` on port 3000 (Vite on 5173 behind it), so edge functions in `netlify/edge-functions/` run locally. Needs `OLLAMA_API_KEY` in `.env`. netlify-cli runs through a pinned `npx`, not a dependency.
 - `npm run build`: typecheck (`tsc -b`) and production build.
 - `npm run lint`: Biome lint.
 - `npm run format`: Biome format with write.
@@ -45,6 +46,7 @@ Skills live in `.agents/skills/<name>/SKILL.md`. Read a skill's `SKILL.md` befor
 - `prd-to-issues`: split a PRD into issue files in `docs/issues/`.
 - `implement`: implement a spec or issue end to end. User-invoked only (`/implement`).
 - `troubleshooting`: diagnose bugs and regressions.
+- `verify`: run the site under `netlify dev` and drive it in a headless browser to prove a change works.
 
 Claude Code also loads plugins from `.claude/settings.json`:
 

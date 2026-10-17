@@ -147,7 +147,7 @@ function HomePage() {
               <span className="hero__eyebrow">Software Engineer</span>
 
               <p className="hero__sub">
-                Software Engineer with 7+ years of experience building
+                Software Engineer with 8 years of experience building
                 high-performance web applications. Deep expertise in React,
                 Next.js, TypeScript, and frontend architecture in production
                 front-end applications. Proven track record in web performance

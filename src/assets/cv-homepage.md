@@ -2,7 +2,7 @@
 
 Software Engineer
 
-Software Engineer with 7+ years of experience building high-performance web applications. Deep expertise in React, Next.js, TypeScript, and frontend architecture in production front-end applications. Proven track record in web performance optimization, technical SEO, cross-functional collaboration, and delivering data-driven features. Passionate about leveraging AI to automate workflows and enhance user experience.
+Software Engineer with 8 years of experience building high-performance web applications. Deep expertise in React, Next.js, TypeScript, and frontend architecture in production front-end applications. Proven track record in web performance optimization, technical SEO, cross-functional collaboration, and delivering data-driven features. Passionate about leveraging AI to automate workflows and enhance user experience.
 
 
 ## Timeline

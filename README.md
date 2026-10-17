@@ -5,7 +5,7 @@
 [![Portfolio](https://img.shields.io/badge/Portfolio-luciapuccini.netlify.app-2ea44f)](https://luciapuccini.com/)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-luciapuccini-0a66c2)](https://www.linkedin.com/in/luciapuccini/)
 
-Frontend engineer with **7+ years** building production web applications in
+Frontend engineer with **8 years** building production web applications in
 product-facing and enterprise environments. Focused on frontend architecture,
 web performance, and accessibility, working cross-functionally with product,
 design, QA, and backend teams. EU citizen · English & Spanish · Open to relocate.
